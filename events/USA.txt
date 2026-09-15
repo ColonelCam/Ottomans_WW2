@@ -1,0 +1,474 @@
+add_namespace = merf_usa
+
+#Cactus Jack assassination
+country_event = {
+	id = merf_usa.1
+	title = merf_usa.1.t
+	desc = merf_usa.1.d
+	#picture =
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = merf_usa.1.a
+		retire_character = USA_john_nance_garner
+		add_country_leader_role = {
+		    character = USA_cordell_hull
+		    promote_leader = yes
+		    country_leader = {
+		        ideology = liberalism
+		        traits = {
+				###
+			}
+		    }
+		}
+		add_country_leader_role = {
+		    character = USA_henry_ford
+		    promote_leader = yes
+		    country_leader = {
+		        ideology = gen_nazism
+		        traits = { war_industrialist }
+		    }
+		}
+		set_party_name = {
+		    ideology = fascism
+		    long_name = USA_democratic_party
+		    name = USA_democratic_party
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.33
+		}
+		news_event = merf_usa.3
+	}
+}
+
+# Election of 1936: Ford wins
+country_event = {
+	id = merf_usa.2
+	title = usa.6.t
+	desc = usa.6.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = USA
+		#democratic > 0.5
+		date > 1936.1.1
+		date < 1937.1.1
+	}
+
+	option = { 	
+		name = usa.6.a	
+		add_ideas = new_deal
+		if = {
+			limit = {
+				has_idea = standard_oil_california
+			}
+			add_political_power = 150
+		}
+		if = {
+			limit = {
+				NOT = { has_idea = standard_oil_california }
+			}
+			add_ideas = standard_oil_california
+		}
+		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
+		#add_country_leader_role = {
+		#   character = USA_william_borah
+		#    promote_leader = yes
+		#    country_leader = {
+		#        ideology = liberalism
+		#        traits = {
+		#		###
+		#	}
+		#    }
+		#}	
+		#these guys are being really annoying for some reason. this might work.
+		USA_william_borah = {
+			set_nationality = USB
+		}
+		#USA_huey_long = {
+		#	set_nationality = USB
+		#}	
+		add_popularity = {
+		    ideology = fascism
+		    popularity = 0.2
+		}
+		add_popularity = {
+		    ideology = communism
+		    popularity = 0.1
+		}
+		set_politics = {
+		    ruling_party = fascism
+		    elections_allowed = yes
+		}
+		#set_cosmetic_tag = USA_democratic
+		news_event = merf_usa.4
+		every_state = {
+			limit = {
+				OR = {
+					#COMMIES
+					state = 261
+					state = 360
+					state = 358
+					state = 359
+					state = 393
+					state = 396
+					state = 395 #chicago
+					state = 816
+					state = 394
+					#DEMOCRATS
+					state = 357
+					state = 371
+					state = 376
+					state = 382
+					state = 383
+					state = 373
+					state = 392
+					state = 391
+					state = 390
+					state = 389
+					state = 384
+					state = 381
+					state = 388
+					state = 377
+					state = 380
+					state = 387 #idaho
+					state = 261
+					state = 386
+					state = 385
+					state = 379
+					state = 378
+				}
+			}
+			set_demilitarized_zone = yes
+		}
+		country_event = {
+			id = merf_usa.5
+			days = 95
+		}
+	}
+}
+
+#news for cactus jack assassination
+news_event = {
+	id = merf_usa.3
+	title = merf_usa.3.t
+	desc = merf_usa.3.d
+	#picture =
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = merf_usa.3.a
+	}
+}
+#news for Henry Ford election
+news_event = {
+	id = merf_usa.4
+	title = merf_usa.4.t
+	desc = merf_usa.4.d
+	#picture =
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = merf_usa.4.a
+	}
+}
+
+#Second American Civil War
+country_event = {
+	id = merf_usa.5
+	title = merf_usa.5.t
+	desc = merf_usa.5.d
+	#picture =
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		if = {
+			limit = {
+				PHI = {
+					is_subject_of = ROOT
+				}
+			}
+			set_autonomy = {
+			    target = PHI
+			    autonomous_state = autonomy_free
+			    end_wars = yes
+			    end_civil_wars = yes
+			}
+		}
+		every_state = {
+			limit = {
+				OR = {
+					#COMMIES
+					state = 261
+					state = 360
+					state = 358
+					state = 359
+					state = 393
+					state = 396
+					state = 395 #chicago
+					state = 816
+					state = 394
+					#DEMOCRATS
+					state = 357
+					state = 371
+					state = 376
+					state = 382
+					state = 383
+					state = 373
+					state = 392
+					state = 391
+					state = 390
+					state = 389
+					state = 384
+					state = 381
+					state = 388
+					state = 377
+					state = 380
+					state = 387 #idaho
+					#state = 261
+					state = 386
+					state = 385
+					state = 379
+					state = 378
+				}
+			}
+			set_demilitarized_zone = no
+		}
+		every_state = {
+			limit = {
+				is_core_of = USA
+			}
+			add_core_of = USB
+		}		
+		CAN = {
+			transfer_state = 463
+		}
+		JAP = {
+			transfer_state = 650
+			transfer_state = 638
+		}
+		every_owned_state = {
+			limit = {
+				OR = {
+					state = 629
+					state = 631
+					state = 727
+					state = 630
+					state = 632
+					state = 642
+				}
+			}
+			transfer_state_to = ENG
+		}
+		delete_unit = {} # Will delete all units
+		#GENERALS
+		USA_omar_bradley = {
+			set_nationality = USB
+		}
+		USA_dwight_d_eisenhower = {
+			set_nationality = USB
+		}
+		USA_leslie_mcnair = {
+			set_nationality = USB
+		}
+		USA_alexander_patch = {
+			set_nationality = USB
+		}
+		USA_william_simpson = {
+			set_nationality = USB
+		}
+		USA_oscar_griswold = {
+			set_nationality = USB
+		}
+	}
+	option = {
+		name = merf_usa.5.a
+		start_civil_war = {
+		    ideology = communism
+		    size = 0.3
+		    capital = 395
+		    states = {
+			261
+			360
+			358
+			359
+			393
+			396
+			395 #chicago
+			816
+			394
+		    }
+		}
+		#start_civil_war = { #THIS DOESNT WORK
+		#   ideology = democratic
+		#    size = 0.5
+		#    capital = 395
+		#    states = {
+		#	357
+		#	371
+		#	376
+		#	382
+		#	383
+		#	373
+		#	392
+		#	391
+		#	390
+		#	389
+		#	384
+		#	381
+		#	388
+		#	377
+		#	380
+		#	387 #idaho
+		#	261
+		#	386
+		#	385
+		#	379
+		#	378
+		#    }
+		#}
+		#every_country = {
+		#	limit = {
+		#		original_tag = USA
+		#		has_government = democratic
+		#	}
+		#	country_event = { id = merf_usa.6 days = 1095 }
+		#	load_oob = "USA_cw_dem"
+		#}
+		every_state = {
+			limit = {
+				OR = {
+					state = 357
+					state = 371
+					state = 376
+					state = 382
+					state = 383
+					state = 373
+					state = 392
+					state = 391
+					state = 390
+					state = 389
+					state = 384
+					state = 381
+					state = 388
+					state = 377
+					state = 380
+					state = 387 #idaho
+					#state = 261 #you shouldn't be here.
+					state = 386
+					state = 385
+					state = 379
+					state = 378
+				}
+			}
+			transfer_state_to = USB
+		}
+		USB = {
+			set_cosmetic_tag = USA_democratic
+			set_party_name = { ideology = neutrality long_name = USA_democratic_party name = USA_democratic_party }
+			set_party_name = { ideology = democratic long_name = USA_republican_party  name = USA_republican_party }
+			#add_country_leader_role = {
+			#    character = USA_huey_long
+			#    promote_leader = yes
+			#    country_leader = {
+			#        ideology = oligarchism
+			#        traits = {
+			#		USA_share_the_wealth
+			#	}
+			#    }
+			#}
+			add_country_leader_role = {
+			    character = USA_william_borah
+			    promote_leader = yes
+			    country_leader = {
+			        ideology = liberalism
+			        traits = {
+					USA_lion_of_idaho
+				}
+			    }
+			}
+			load_oob = "USA_cw_dem"	
+			country_event = { id = merf_usa.6 days = 1095 }
+		}
+		every_country = {
+			limit = {
+				original_tag = USA
+				has_government = communism
+			}
+			declare_war_on = {
+                		target = USB
+                		type = annex_everything
+            		}
+			load_oob = "USA_cw_com"
+		}
+		load_oob = "USA_cw_fash"
+		declare_war_on = {
+                	target = USB
+                	type = annex_everything
+            	}
+		news_event = merf_usa.7
+		set_party_name = { ideology = democratic long_name = USA_democratic_party  name = USA_democratic_party }
+	}
+}
+
+#William Borah dies
+country_event = {
+	id = merf_usa.6
+	title = merf_usa.6.t
+	desc = merf_usa.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		drop_cosmetic_tag = yes
+	}
+	option = {
+		name = merf_usa.6.a
+		retire_character = USA_william_borah
+		#add_country_leader_role = { #huey long dong is driving me crazy dawg why won't he work properly
+		#    character = USA_huey_long
+		#    promote_leader = yes
+		#    country_leader = {
+		#        ideology = oligarchism
+		#        traits = {
+		#		USA_share_the_wealth
+		#	}
+		#    }
+		#}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.25
+		}
+		set_politics = {
+		    ruling_party = neutrality
+		    elections_allowed = yes
+		}
+		set_cosmetic_tag = USA_democratic
+		news_event = merf_usa.8
+	}
+}
+
+#Civil War news event
+news_event = {
+	id = merf_usa.7
+	title = merf_usa.7.t
+	desc = merf_usa.7.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = merf_usa.7.a
+	}
+}
+#Borah Death News Event
+news_event = {
+	id = merf_usa.8
+	title = merf_usa.8.t
+	desc = merf_usa.8.d
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = merf_usa.8.a
+	}
+}

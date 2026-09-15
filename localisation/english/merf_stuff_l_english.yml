@@ -1,0 +1,20 @@
+﻿l_english:
+
+  #TRAITS
+  USA_cactus_jack:0 "Cactus Jack"
+  USA_share_the_wealth:0 "The Kingfish"
+  USA_lion_of_idaho:0 "The Lion of Idaho"
+
+  #NEWS EVENTS
+  merf_usa.3.t:0 "American President Assassinated!"
+  merf_usa.3.d:0 "Shock has gripped the United States today, as President John Nance Garner has been assassinated while on a routine campaign stop as part of his primary re-election campaign! This follows continued unrest over his failure to remedy the Great Depression amid growing radicalism.\n\nVice-President Cordell Hull has been hurridly sworn in as president, but has confirmed he does not intend to stand for election in November. As such, the primary is all but assured to go to radical challenger, Senator Henry Ford."
+  merf_usa.3.a:0 "America's greatest test is coming..."
+  merf_usa.4.t:0 "Henry Ford elected U.S. President"
+  merf_usa.4.d:0 "After years of hardship and struggle, radical Democrat senator Henry Ford has been elected President of the United States.\n\nAllying with the far-right and technocrats, Ford promises to drag America "kicking and screaming" into the 20th century. His blatant disregard for democracy is worrying both Republican moderates and Socialists alike, however, and few believe he will be able to keep the nation together."
+  merf_usa.4.a:0 "What a frightful man."
+  merf_usa.7.t:0 "The Second American Civil War"
+  merf_usa.7.d:0 "Tensions in America have reached a boiling point, and with both the Republicans and the Communists finding President Ford's new policies unacceptable, a popular uprising has begun.\n\nCommunist militias have seized state apparatus in Northern states, while Senators William Borah and Huey Long have made a grand coalition with  progressive state governors across the country to declare open rebellion against D.C.\n\nThe Second American Civil War has begun."
+  merf_usa.7.a:0 "Who will win?"
+  merf_usa.8.t:0 "Death of William Borah"
+  merf_usa.8.d:0 "Leader of the Freedom Coalition of America, William Borah, has died. While he was never able to actually get himself officially sworn in as president, many still see him as having been the rightful leader.\n\nHis successor, Huey Long, however leaves no time to show off his now unquestioned power. In a ceremony officially declaring himself president, he has taken over the apparatus of state, and ironically now rules as essentially a dictator.\n\nWithout Borah to reel him in, his unchecked power only grows..."
+  merf_usa.8.a:0 "It seems American democracy was doomed regardless."
