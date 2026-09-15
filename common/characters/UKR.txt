@@ -54,6 +54,10 @@ characters = {
 				large = GFX_portrait_UKR_mykhailo_omelianovych_pavlenko
 				small = GFX_portrait_UKR_mykhailo_omelianovych_pavlenko_small
 			}
+			civilian = {
+				large = GFX_portrait_UKR_mykhailo_omelianovych_pavlenko
+				small = GFX_portrait_UKR_mykhailo_omelianovych_pavlenko_small
+			}
 		}
 
 		field_marshal = {
