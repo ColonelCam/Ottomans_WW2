@@ -103,7 +103,7 @@ country_event = {
 		    ruling_party = fascism
 		    elections_allowed = yes
 		}
-		#set_cosmetic_tag = USA_democratic
+		set_cosmetic_tag = USA_democratic
 		news_event = merf_usa.4
 		every_state = {
 			limit = {
@@ -198,6 +198,11 @@ country_event = {
 			    end_civil_wars = yes
 			}
 		}
+		set_politics = {
+		    ruling_party = fascism
+		    elections_allowed = no
+		}
+		drop_cosmetic_tag = yes
 		every_state = {
 			limit = {
 				OR = {
