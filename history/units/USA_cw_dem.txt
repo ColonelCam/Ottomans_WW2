@@ -452,7 +452,7 @@ units = { #should be 48 divisions here - 24 of each type
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 9450  # chicago
+		location = 1827  # denver
 		division_template = "Mechanized Cavalry"
 	}
 	division = {
@@ -460,7 +460,7 @@ units = { #should be 48 divisions here - 24 of each type
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 9450  # chicago
+		location = 1827  # denver
 		division_template = "Mechanized Cavalry"
 	}
 	division = {
@@ -468,7 +468,7 @@ units = { #should be 48 divisions here - 24 of each type
 			is_name_ordered = yes
 			name_order = 3
 		}
-		location = 9450  # chicago
+		location = 1827  # denver
 		division_template = "Mechanized Cavalry"
 	}
 	division = {
@@ -476,7 +476,7 @@ units = { #should be 48 divisions here - 24 of each type
 			is_name_ordered = yes
 			name_order = 4
 		}
-		location = 9450  # chicago
+		location = 1827  # denver
 		division_template = "Mechanized Cavalry"
 	}
 	division = {
@@ -484,7 +484,7 @@ units = { #should be 48 divisions here - 24 of each type
 			is_name_ordered = yes
 			name_order = 5
 		}
-		location = 9450  # chicago
+		location = 1827  # denver
 		division_template = "Mechanized Cavalry"
 	}
 	division = {
@@ -492,7 +492,7 @@ units = { #should be 48 divisions here - 24 of each type
 			is_name_ordered = yes
 			name_order = 6
 		}
-		location = 9450  # chicago
+		location = 1827  # denver
 		division_template = "Mechanized Cavalry"
 	}	
 }
