@@ -73,7 +73,7 @@ characters = {
 
 		country_leader = {
 			ideology = fascism_ideology
-			traits = { }
+			traits = { likes_germany }
 		}
 		
 	}
