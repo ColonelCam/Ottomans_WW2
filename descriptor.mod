@@ -3,4 +3,4 @@ tags={
 	"Alternative History"
 }
 name="Ottomans_WW2"
-supported_version="1.19.2.0"
+supported_version="1.19.*"
