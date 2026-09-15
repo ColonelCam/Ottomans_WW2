@@ -18,3 +18,40 @@
   merf_usa.8.t:0 "Death of William Borah"
   merf_usa.8.d:0 "Leader of the Freedom Coalition of America, William Borah, has died. While he was never able to actually get himself officially sworn in as president, many still see him as having been the rightful leader.\n\nHis successor, Huey Long, however leaves no time to show off his now unquestioned power. In a ceremony officially declaring himself president, he has taken over the apparatus of state, and ironically now rules as essentially a dictator.\n\nWithout Borah to reel him in, his unchecked power only grows..."
   merf_usa.8.a:0 "It seems American democracy was doomed regardless."
+
+  merf_r.4.t:0 "The Great Polish Revolt"
+  merf_r.4.d:0 "Failure after failure to deal with dissent in Poland and Western Ukraine has gone hot in [SOV.GetNameDef], as the rump government of Galicia has decided to formally intervene on behalf of the oppressed minorities. Russia is clearly deeply unprepared for this full scale attack, and its forces are in full retreat."
+  merf_r.4.a:0 "The Russian Bear falters..."
+  merf_r.8.t:0 "Military Coup in Ukraine"
+  merf_r.8.d:0 "Following the success of their uprising against Russia, Ukraine has not had an easy time of asserting control of their new lands.\n\nHaving been aided greatly by communist partisans, they have now turned against the new government.\n\nAmid public fear of a communist plot to stage a coup, the German-aligned military has beaten to them punch and taken full control of the government. They pledge to restore order and purge the red menace."
+  merf_r.8.a:0 "[GER.GetLeader] will be loving this..."
+
+  #COUNTRY EVENTS
+ merf_r.2.t:0 "Ethnic Conflict in Russia"
+ merf_r.2.d:0 "The Russian Empire is tearing at the seams, as Polish and Ukrainian nationalists increase their struggle, aided by the small regimes in Galicia and Western Ukraine.\n\nTheir problems can be our lessons, however, as we ourselves govern a multiethnic empire.\n\nWhat shall become of us?"
+ merf_r.2.a:0 "Peace and Harmony are our strengths."
+ merf_r.2.b:0 "A common enemy will unite us."
+ merf_r.5.t:0 "An Offer from Moscow"
+ merf_r.5.d:0 "Following the explosion of conflict in their Western territories, the Russians now eye their other possessions with nervous anticipation.\n\nWanting to get ahead of possible revolts in the Caucuses, and aware of our interests there, they have come to us with an interesting offer.\n\nThe Russians offer to establish a so-called Transcaucasian Condominium; this new state would be jointly ruled by both us and Moscow and offer us joint enterprise as a free economic zone. Under the nominal puppet rule of George Bagration, an acceptable neutral figure amenable to both parties and popular with the local population, this would be a huge foreign policy win for our government.\n\nShould we accept?"
+ merf_r.5.a:0 "This will be very beneficial for us."
+ merf_r.5.b:0 "Let's just invade while they're distracted."
+ merf_r.9.t:0 "The Caucasian Question"
+ merf_r.9.d:0 "With global tensions higher than even during the Great War, the question of our Transcaucasian Condominium has come once more into the forefold.\n\nRealistically, this could never have been a long-term arrangement, and the question now is what to do..."
+ merf_r.9.a:0 "Contact Our Loyalists in the Government"
+ merf_r.9.b:0 "The Russians are busy, just invade!"
+ merf_r.9.c:0 "The current arrangement suits fine."
+
+
+  #IDEAS
+  SOV_great_polish_revolt:0 "Great Polish Revolt"
+
+  #TOOLTIPS
+  TUR_transcaucuses_condominium_tt:0 "§GA new, neutral country shall be formed out of the Russian Caucasian states.§! §YThis country will be guaranteed by both us and Russia, as well as giving us both military access. We will receive resource rights to the Azerbaijani Oil.§!\n\n§RThere will be further opportunities to fully bind this region to our will, in the future...§!"
+
+  #COSMETIC TAGS
+  GEO_transcaucuses_condominium_ct:0 "Transcaucasian Commonwealth"
+  GEO_transcaucuses_condominium_ct_DEF:0 "the Transcaucasian Commonwealth"
+  GEO_transcaucuses_condominium_ct_ADJ:0 "Transcaucasian"
+  POL_big_poland:0 "Greater Poland"
+  POL_big_poland_DEF:0 "Greater Poland"
+  POL_big_poland_ADJ:0 "Polish"

@@ -1,0 +1,330 @@
+add_namespace = merf_r
+
+#mass protests in Poland and Ukraine
+country_event = {
+	id = merf_r.1
+	title = merf_r.1.t
+	desc = merf_r.1.d
+	#picture =
+	is_triggered_only = yes #history file
+	fire_only_once = yes
+	option = {
+		name = merf_r.1.a
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = POL
+					is_core_of = UKR
+				}
+			}
+			set_demilitarized_zone = yes
+		}
+		TUR = {
+			country_event = merf_r.2
+		}
+		country_event = {
+			id = merf_r.3
+			days = 100
+		}
+	}
+}
+
+#Turkey is notified of the ethnic tensions
+country_event = {
+	id = merf_r.2
+	title = merf_r.2.t
+	desc = merf_r.2.d
+	#picture =
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = merf_r.2.a
+		add_stability = 0.05
+	}
+	option = {
+		name = merf_r.2.b
+		add_war_support = 0.05
+	}
+}
+
+#Protests reach boiling point
+country_event = {
+	id = merf_r.3
+	title = merf_r.3.t
+	desc = merf_r.3.d
+	#picture =
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = POL
+					is_core_of = UKR
+				}
+			}
+			set_demilitarized_zone = no
+		}
+		POL = {
+			declare_war_on = {
+                		target = ROOT
+                		type = annex_everything
+            		}
+			transfer_units_fraction= { #ensure UKR doesn't insta die
+				target = UKR
+				size = 0.5
+				stockpile_ratio = 0.5
+				army_ratio = 0.5
+				navy_ratio = 0.0
+				air_ratio = 0.5
+				keep_unit_leaders_trigger = {
+					always = yes
+				}
+			}
+		}
+		UKR = {
+			declare_war_on = {
+                		target = ROOT
+                		type = annex_everything
+            		}
+		}
+	}
+	option = {
+		name = merf_r.3.a
+		add_ideas = SOV_great_polish_revolt
+		news_event = merf_r.4
+		TUR = {
+			country_event = {
+				id = merf_r.5
+				days = 14
+			}
+		}
+		country_event = {
+			id = merf_r.6
+			days = 45
+		}
+	}
+}
+
+#news event for above
+news_event = {
+	id = merf_r.4
+	title = merf_r.4.t
+	desc = merf_r.4.d
+	#picture =
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = merf_r.4.a
+	}
+}
+
+#Creation of the Transcaucasian Condominium?
+country_event = {
+	id = merf_r.5
+	title = merf_r.5.t
+	desc = merf_r.5.d
+	#picture =
+	is_triggered_only = yes
+	fire_only_once = yes
+	#This sounds benefical to us
+	option = {
+		name = merf_r.5.a
+		custom_effect_tooltip = TUR_transcaucuses_condominium_tt
+		hidden_effect = {
+			SOV = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 231
+						state = 826
+						state = 233
+						state = 827
+						state = 230
+						state = 229
+					}
+				}
+				set_state_owner_to = GEO
+				add_core_of = GEO
+			}
+			give_guarantee = GEO
+			}
+			GEO = {
+				set_cosmetic_tag = GEO_transcaucuses_condominium_ct
+				set_popularities = {
+					democratic = 19
+					neutrality = 48
+					fascism = 15
+					communism = 18
+				}
+				set_politics = {
+				    ruling_party = neutrality
+				    elections_allowed = no
+				}
+				give_resource_rights = { receiver = TUR state = 229 }
+				give_resource_rights = { receiver = TUR state = 827 }
+				give_resource_rights = { receiver = SOV state = 233 }
+				give_military_access = TUR
+				give_military_access = SOV
+			}
+			give_guarantee = GEO
+			set_global_flag = GEO_transcaucasian_commonwealth
+		}
+	}
+	#Let's just invade.
+	option = {
+		name = merf_r.5.b
+		create_wargoal = {
+		    type = take_state_focus
+		    target = SOV
+		    generator = { 230 231 229 }
+		    expire = 180
+		}
+	}
+}
+
+#end of the Polish uprising
+country_event = {
+	id = merf_r.6
+	title = merf_r.6.t
+	desc = merf_r.6.d
+	#picture =
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		UKR = {
+			country_event = {
+				id = merf_r.7
+				days = 7
+			}
+		}
+	}
+	trigger = {
+		OR = {
+			country_exists = POL
+			country_exists = UKR
+		}
+	}
+	#keep the war going
+	option = {
+		name = merf_r.6.a
+		remove_ideas = SOV_great_polish_revolt
+		trigger = {
+			POL = {
+				is_in_faction = yes
+			}
+		}
+		POL = {
+			set_cosmetic_tag = POL_big_poland
+		}
+	}
+	option = {
+		name = merf_r.6.a
+		remove_ideas = SOV_great_polish_revolt
+		trigger = {
+			POL = {
+				is_in_faction = no
+			}
+		}
+		POL = {
+			set_cosmetic_tag = POL_big_poland
+		}
+		if = {
+			limit = {
+				country_exists = POL
+			}
+		every_owned_state = {
+			limit = {
+				is_core_of = POL
+			}
+			set_state_owner_to = POL
+		}
+		}
+		if = {
+			limit = {
+				country_exists = UKR
+			}
+		every_owned_state = {
+			limit = {
+				is_core_of = UKR
+			}
+			set_state_owner_to = UKR
+		}
+		}
+		white_peace = POL
+		white_peace = UKR
+	}
+}
+
+#military coup in Ukraine
+country_event = {
+	id = merf_r.7
+	title = merf_r.7.t
+	desc = merf_r.7.d
+	#picture =
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = merf_r.7.a
+		set_politics = {
+		    ruling_party = fascism
+		    elections_allowed = no
+		}	
+		news_event = merf_r.8	
+	}
+}
+#news for above
+news_event = {
+	id = merf_r.8
+	title = merf_r.8.t
+	desc = merf_r.8.d
+	#picture =
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = merf_r.8.a
+	}
+}
+
+#Turkey invade Georgia?
+country_event = {
+	id = merf_r.9
+	title = merf_r.9.t
+	desc = merf_r.9.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = TUR
+		is_ai = no
+		has_global_flag = GEO_transcaucasian_commonwealth
+		OR = {
+			has_war_with_major = yes
+			SOV = {
+				has_war_with_major = yes
+			}
+		}
+	}
+	mean_time_to_happen = { days = 85 }
+	#let's just set up a puppet government
+	option = {
+		name = merf_r.9.a
+		set_autonomy = {
+		    target = GEO
+		    autonomous_state = autonomy_dominion
+		    end_wars = yes
+		    end_civil_wars = no
+		}
+	}
+	#very well, it's time to attack
+	option = {
+		name = merf_r.9.b
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = GEO
+		}
+	}
+	#we need to consolidate our own stuff
+	option = {
+		name = merf_r.9.c
+		add_war_support = 0.15
+	}
+}
