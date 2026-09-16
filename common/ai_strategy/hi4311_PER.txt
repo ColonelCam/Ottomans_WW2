@@ -1,0 +1,84 @@
+PER_prepare_for_war_strategy = {
+	abort_when_not_enabled = yes
+	allowed = {
+		original_tag = PER
+	}
+	enable = {
+		date > 1936.1.1
+		date < 1939.3.1
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 720
+	}
+	ai_strategy = {
+		type = antagonize
+		id = TUR
+		value = 100
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 450
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 800
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = cas
+		value = 200
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = tactical_bomber
+		value = -80
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = naval_bomber
+		value = -120
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = strategic_bomber
+		value = -200
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = 200
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 150
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 750
+	}
+}
+
+PER_attack_AFG_strategy = {
+	abort_when_not_enabled = yes
+	allowed = {
+		original_tag = PER
+	}
+	enable = {
+		has_idea = PER_SCRIPTED_NARRATIVE_CONQUER_AFGHANISTAN
+		has_war_with = AFG
+	}
+	ai_strategy = {
+		type = force_concentration_front_factor
+
+		tag = AFG
+		strategic_region = 289 162
+		ratio = 0.8
+
+		value = 100
+	}
+}

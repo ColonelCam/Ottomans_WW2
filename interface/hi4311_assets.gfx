@@ -1,0 +1,11 @@
+SpriteTypes = {
+	SpriteType = {
+		name = "GFX_PER_EVENT_PICTURE_001"
+		texturefile = "gfx/event_pictures/PER_news_event_001.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_PER_deutsche_iranian_oil"
+		texturefile = "gfx/interface/hi4311_gfx/idea_PER_deutsche_iranian_oil.dds"
+	}
+}

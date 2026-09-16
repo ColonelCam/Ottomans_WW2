@@ -1,0 +1,141 @@
+add_namespace = h_per_news
+add_namespace = h_per_events
+
+# Constitutional Crisis - Flavour news
+news_event = {
+	id = h_per_news.1
+	title = h_per_news.1.t
+	desc = h_per_news.1.d
+
+    major = yes
+	picture = GFX_PER_EVENT_PICTURE_001
+	is_triggered_only = yes
+
+	option = {
+		name = h_per_news.1.yek	
+	}
+}
+
+country_event = { # Event for TUR, Persia claims our lands
+    id = h_per_events.1
+    title = h_per_events.1.t
+    desc = h_per_events.1.d
+
+    picture = GFX_report_event_generic_troops_in_iraq
+    is_triggered_only = yes
+
+    option = {
+        name = h_per_events.1.yek
+        TUR = {
+            add_stability = -0.1
+            add_war_support = 0.05
+            custom_effect_tooltip = generic_skip_one_line_tt
+            every_owned_state = {
+                limit = {
+                    OR = {
+                        is_core_of = IRQ
+                        is_core_of = KUW
+                        is_core_of = KUR
+                    }
+                }
+                add_claim_by = PER
+            }
+        }
+        custom_effect_tooltip = h_per_events.1.yek_tt
+    }
+}
+
+country_event = { # Event for TUR, Persia invades Afghanistan
+    id = h_per_events.2
+    title = h_per_events.2.t
+    desc = h_per_events.2.d
+
+    picture = GFX_report_event_generic_ruins
+    is_triggered_only = yes
+
+    option = {
+        name = h_per_events.2.yek
+        add_political_power = -20
+        custom_effect_tooltip = generic_skip_one_line_tt
+        send_equipment = {
+            equipment = infantry_equipment
+            amount = 500
+            target = AFG
+        }
+        custom_effect_tooltip = generic_skip_one_line_tt
+        AFG = {
+            add_opinion_modifier = { target = TUR modifier = offered_support }
+        }
+    }
+    option = { # No lol
+        name = h_per_events.2.do
+        AFG = {
+            add_opinion_modifier = { target = TUR modifier = large_decrease }
+        }
+    }
+}
+
+country_event = { # Event for TUR, Persia incentivizes Kurdish rebellion
+    id = h_per_events.3
+    title = h_per_events.3.t
+    desc = h_per_events.3.d
+
+    picture = GFX_report_event_tur_kurdish_guerillas
+    fire_only_once = yes
+    trigger = {
+        original_tag = TUR
+        has_war_with = PER
+    }
+
+    option = {
+        name = h_per_events.3.yek
+        
+        add_stability = -0.1
+        hidden_effect = {
+            TUR = {
+                every_owned_state = {
+                    limit = {
+                        OR = {
+                            state = 680
+                            state = 676
+                        }
+                    }
+                    transfer_state_to = KUR
+                }
+            }
+            PER = {
+                puppet = KUR
+            }
+        }
+        KUR = {
+            declare_war_on = {
+                target = TUR
+                type = independence_wargoal
+            }
+        }
+    }
+}
+
+country_event = { # Event for TUR, Persia has joined The Axis
+    id = h_per_events.4
+    title = h_per_events.4.t
+    desc = h_per_events.4.d
+
+    immediate = {
+        hidden_effect = {
+            PER = {
+                swap_ideas = {
+                    add_idea = PER_deutsche_iranian_oil_ns
+                    remove_idea = PER_anglo_iranian_oil_ns
+                }
+            }
+        }
+    }
+
+    picture = GFX_report_event_soviet_german_soldier_handshake
+    is_triggered_only = yes
+
+    option = {
+        name = h_per_events.4.yek
+    }
+}
