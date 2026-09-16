@@ -1,0 +1,14 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_idea_TUR_victor_of_the_great_war"
+        texturefile = "gfx/interface/ideas/TUR_victor_of_the_great_war.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_TUR_privatization"
+        texturefile = "gfx/interface/ideas/TUR_privatization.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_TUR_san_remo_oil_agreemnt"
+        texturefile = "gfx/interface/ideas/TUR_san_remo_oil_agreemnt.dds"
+    }
+}
