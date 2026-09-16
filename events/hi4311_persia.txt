@@ -8,7 +8,7 @@ news_event = {
 	desc = h_per_news.1.d
 
     major = yes
-	picture = GFX_PER_EVENT_PICTURE_001
+	picture = GFX_PER_NEWS_EVENT_PICTURE_001
 	is_triggered_only = yes
 
 	option = {
@@ -21,7 +21,7 @@ country_event = { # Event for TUR, Persia claims our lands
     title = h_per_events.1.t
     desc = h_per_events.1.d
 
-    picture = GFX_report_event_generic_troops_in_iraq
+    picture = GFX_PER_EVENT_PICTURE_001
     is_triggered_only = yes
 
     option = {
@@ -34,12 +34,12 @@ country_event = { # Event for TUR, Persia claims our lands
                 limit = {
                     OR = {
                         is_core_of = IRQ
-                        is_core_of = KUW
                         is_core_of = KUR
                     }
                 }
                 add_claim_by = PER
             }
+            656 = { add_claim_by = PER }
         }
         custom_effect_tooltip = h_per_events.1.yek_tt
     }
