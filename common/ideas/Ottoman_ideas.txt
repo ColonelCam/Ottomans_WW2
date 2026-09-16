@@ -16,7 +16,6 @@ ideas = {
 				experience_gain_army = -0.1
 				experience_gain_navy = -0.1
 				experience_gain_air = -0.1
-				conscription = -0.003
 				land_doctrine_cost_factor = 0.5
 				land_mastery_gain_factor = -0.2
 			}
@@ -32,13 +31,23 @@ ideas = {
 				research_speed_factor = 0.10
 			}
 		}
-			TUR_san_remo_oil_agreemnt = {
+			TUR_san_remo_oil_agreement = {
 			picture = GFX_idea_TUR_san_remo_oil_agreemnt
 			allowed = { tag = TUR }
 			removal_cost = -1
 
 			modifier = {
 				political_power_factor = -0.1
+			}
+		}
+			TUR_consession_to_minorities = {
+			picture = GFX_idea_TUR_consession_to_minorities
+			allowed = { tag = TUR }
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.1
+				conscription = -0.005
 			}
 		}
 	}

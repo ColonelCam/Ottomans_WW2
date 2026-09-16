@@ -122,6 +122,7 @@ set_autonomy = {
 	autonomous_state = autonomy_dominion
 }
 
+
 1936.1.1 = {
 	if = { 
 		limit = { has_dlc = "Battle for the Bosporus" }	
@@ -134,7 +135,8 @@ set_autonomy = {
 			TUR_widespread_illiteracy_idea
 			TUR_victor_of_the_great_war
 			TUR_privatization
-			TUR_san_remo_oil_agreemnt
+			TUR_san_remo_oil_agreement
+			TUR_consession_to_minorities
 		}	
 		
 	
