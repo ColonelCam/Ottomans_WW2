@@ -25,6 +25,9 @@
   
   # NATSPIRITS
   PER_german_military_advisors: "[GER.GetAdjective] Military Advisors"
+
+  PER_bell_tolls: "The Looming End"
+  PER_bell_tolls_desc: "The Qajar dynasty sits in the Golestan Palace like a candle in a windstorm, believing itself to be draught-proof. The Shah hears music; the colonels hear opportunity. Reza Khan sharpens his sabre, Hassan-e Modarres readies his sermons, the tribes count rifles. Every officer, cleric and warlord is waiting for the same door to open.\n\nThe End is already in the room, sipping tea, waiting to be offered a chair."
   
   PER_deutsche_iranian_oil_ns: "[GER.GetAdjective]-[PER.GetAdjective] Oil Company"
   PER_deutsche_iranian_oil_ns_desc: "Formerly known as the Anglo-Persian Oil Company, the APOC was founded by the United Kingdom in 1909 following the discovery of a significantly sized oil field in Masjed-e Soleiman.\n\nNow known as the [GER.GetAdjective]-[PER.GetAdjective] Oil Company since the signing of the new contract and treaty with [GER.GetNameDefCap]."

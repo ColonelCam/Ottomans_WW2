@@ -36,6 +36,26 @@ ideas = {
 				min_export = -0.3		
 			}
 		}
+
+		PER_bell_tolls = {
+			picture = PER_looming_end
+			allowed = {
+				always = no
+			}
+			cancel = {
+				NOT = {
+					has_country_leader = {
+						character = PER_mohammad_hassan_mirza
+						ruling_only = yes
+					}
+				}
+			}
+			
+			modifier = {
+				stability_factor = -0.15
+				drift_defence_factor = -0.1
+			}
+		}
 	}
 	
 	hidden_ideas = {
