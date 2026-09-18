@@ -4,6 +4,10 @@
   h_per_news.1.t: "[PER.GetAdjective] Crisis Ends"
   h_per_news.1.d: "The "Second Persian Constitutional Crisis" as dubbed by many, has ended as the guns in Tehran go silent. Reformists, tribal intermediaries, labor organizers were all either arrested or shot. Those who disappeared, the most prominent among them being Reza Maxim, otherwise known as Reza Khan, are unknown to be alive, detailed, or already buried.\n\nWith [PER.GetLeader] consolidating his grip, [PER.GetNameDefCap] now enters a strange quiet led by the Islamic Ulema and the Qajar Dynasty. Some estimate a return of tensions should [PER.GetNameDefCap] find itself in a crisis. But as of now, order has been restored."
   h_per_news.1.yek: "Qajars Remain Everpresent"
+
+  h_per_news.2.t: "Persian Powderkeg Explodes"
+  h_per_news.2.d: "Two flags compete in the Persian plateu now, the Constitutionalists gathered around Reza Khan, the only man claimed by many to be the sole savior of Iran. Armed with an army and an iron will.\n\nThe second is the flag of the clergy. Ayatollah Hassan-e Modarres, the old lion of the constitutional movement, has found an unlikely ally in a young cleric named Ruhollah Khomeini. Together they preach from Qom and Najaf-adjacent pulpits that the Qajar throne has failed Islam, failed Persia, and failed the people. They have no army, but they have faith- and faith moves crowds.\n\nThe only question is who will fire the first shot—and whether there will be a Persia left to rule when the smoke clears."
+  h_per_news.2.yek: "This is not going to end well."
   
   h_per_events.1.t: "[PER.GetNameDefCap] Lays Claims to [TUR.GetAdjective] Territories"
   h_per_events.1.d: "Ah, the Persians. Our Muslim brethren who could not follow the Sunni faith as we did. Persia became Shi’a under the Safavids in the sixteenth century, and ever since then we have been at war with them periodically- sometimes over Baghdad, sometimes over the Caucasus, sometimes over nothing more than the right to pray differently. Up until both of our empires weakened to the point that continued war was not possible. Alas, until now. Now that the Sublime Ottoman State has been reformed to survive a thousand years.\n\nThe Qajar court in [PER.GetNameDefCap] has chosen this moment to remember its old maps. They speak of Iraq, Kuwait, and the Kurdish lands as if they were lost provinces waiting for a Persian spring. A blade is being drawn towards the eastern frontier, a frontier sealed at Qasr-e Shirin in 1639 and watered with centuries of blood. [PER.GetLeader] may believe that reform has made the [TUR.GetNameDefCap] soft. He is mistaken. The Sublime Ottoman State did not survive the Great War by miracle alone. It survived because it bent, bled, and rebuilt.\n\nA New Old War is coming. The Oldest of all, the war between Sunni and Shi'a, between [TUR.capital.Getcapitalvictorypointname] and [PER.capital.Getcapitalvictorypointname]."
@@ -22,6 +26,10 @@
   h_per_events.4.t: "[PER.GetNameDefCap] Has Joined Axis Powers"
   h_per_events.4.d: "In Tehran, [PER.GetLeader] has placed [PER.GetNameDefCap] at the side of the Axis powers- [GER.GetNameDefCap], [ITA.GetNameDefCap], and [JAP.GetNameDefCap]- the sworn enemies of the Sublime Porte. The old game has changed. What was once a border quarrel between Sunni and Shi’a, between Istanbul and Tehran, is now a theater of a coming world war.\n\nFor the Porte, this is the worst kind of news. The Persians have not merely renewed their claim to Iraq, Kuwait, and the Kurdish lands. They have found patrons who can arm them, fund them, and distract the Ottoman armies while Persian divisions march west. In exchange, the Axis gains what it has always wanted: oil, a southern road to [SOV.GetNameDef], and a dagger pointed at the Ottoman heart.\n\nA Second Great War is almost here."
   h_per_events.4.yek: "That's not good."
+
+  h_per_events.5.t: "Territory Usurpation!"
+  h_per_events.5.d: "While both the Russians and the British have been eagerly awaiting the fall of Persia and took territories for themselves, in what comes as a shock, both [ENG.GetNameDefCap] and [SOV.GetNameDefCap] took [1000.GetName] and [413.GetName]- states that were ceded to us in the treaty- before we had a chance to place garrisons there. Effectively invalidating the transfer of those two states to us.\n\nList of states usurped from us:\n- [1000.GetName] - By [SOV.GetNameDef]\n- [413.GetName] - By [ENG.GetName]\n\n\nThis will be a noticeable blow to [TUR.GetAdjective]-Allied relations."
+  h_per_events.5.yek: "How dare they!"
   
   # NATSPIRITS
   PER_german_military_advisors: "[GER.GetAdjective] Military Advisors"
@@ -31,3 +39,13 @@
   
   PER_deutsche_iranian_oil_ns: "[GER.GetAdjective]-[PER.GetAdjective] Oil Company"
   PER_deutsche_iranian_oil_ns_desc: "Formerly known as the Anglo-Persian Oil Company, the APOC was founded by the United Kingdom in 1909 following the discovery of a significantly sized oil field in Masjed-e Soleiman.\n\nNow known as the [GER.GetAdjective]-[PER.GetAdjective] Oil Company since the signing of the new contract and treaty with [GER.GetNameDefCap]."
+  
+  PER_fight_for_new_iran: "The Fight For a New Iran"
+  PER_fight_for_new_iran_desc: "The Qajar dynasty has doomed us, our lands have been lost and our people are now under the yokes of foreign oppression. We must now fend for ourselves and chart what little of our own destiny we have left."
+  
+  # PARTY NAMES
+  PER_islamist_party: "Devotees of Islam"
+  PER_islamist_party_long: "Jebheye Fadayeean-e Eslam ($PER_islamist_party$)"
+
+  PER_constitutional_front: "Constitutional Front"
+  PER_constitutional_front_long: "Jebheye Mashrooteh Iran ($PER_constitutional_front$)"

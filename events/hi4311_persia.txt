@@ -16,6 +16,92 @@ news_event = {
 	}
 }
 
+# Persian defeat aftermath: Persian Powderkeg explodes
+news_event = {
+	id = h_per_news.2
+	title = h_per_news.2.t
+	desc = h_per_news.2.d
+
+    major = yes
+	picture = GFX_PER_NEWS_EVENT_PICTURE_002
+	is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            TUR = { end_puppet = PER }
+            PER = {
+                create_dynamic_country = {
+                    original_tag = PER
+                    transfer_state = 416
+                    transfer_state = 1003
+                    transfer_state = 414
+                    set_cosmetic_tag = PER_ISLAMIST
+                    PER = {
+                        PER_ruhollah_khomeini = {
+                            set_nationality = PREV.PREV
+                        }
+                    }
+                    set_politics = {
+                        ruling_party = fascism
+                        elections_allowed = no
+                        long_name = PER_islamist_party_long
+                        name = PER_islamist_party
+                    }
+                    add_popularity = {
+                        ideology = fascism
+                        popularity = 0.5
+                    }
+                    PER_ruhollah_khomeini = {
+                        add_country_leader_role = {
+                            promote_leader = yes
+                            country_leader = {
+                                ideology = fascism_ideology
+                            }
+                        }
+                        promote_character = {
+                            ideology = fascism_ideology
+                        }
+                    }
+                    add_ideas = { PER_fight_for_new_iran PER_islamic_traditions_ns }
+                }
+
+                set_cosmetic_tag = PER_CONSTIT
+                set_politics = {
+                    ruling_party = democratic
+                    elections_allowed = no
+                    long_name = PER_constitutional_front_long
+                    name = PER_constitutional_front
+                }
+                add_popularity = {
+                    ideology = democratic
+                    popularity = 1
+                }
+                add_popularity = {
+                    ideology = communism
+                    popularity = 0.25
+                }
+                PER_reza_shah_pahlavi = {
+                    add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            ideology = populism
+                        }
+                    }
+                    promote_character = {
+                        ideology = populism
+                    }
+                }
+                add_ideas = PER_fight_for_new_iran
+                remove_ideas = { PER_anglo_iranian_oil_ns PER_rural_feudalism_ns PER_islamic_traditions_ns PER_bell_tolls }
+            }
+        }
+    }
+
+	option = {
+		name = h_per_news.2.yek	
+	}
+}
+
 country_event = { # Event for TUR, Persia claims our lands
     id = h_per_events.1
     title = h_per_events.1.t
@@ -137,5 +223,29 @@ country_event = { # Event for TUR, Persia has joined The Axis
 
     option = {
         name = h_per_events.4.yek
+    }
+}
+
+country_event = { # United Kingdom and Russia grab our lands.
+    id = h_per_events.5
+    title = h_per_events.5.t
+    desc = h_per_events.5.d
+
+    picture = GFX_report_event_PER_iran_invasion
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            PER = {
+                news_event = { id = h_per_news.2 days = 7 random_days = 21 }
+            }
+        }
+    }
+
+    option = {
+        name = h_per_events.5.yek
+        add_political_power = -30
+        add_opinion_modifier = { target = SOV modifier = medium_decrease }
+        add_opinion_modifier = { target = ENG modifier = medium_decrease }
     }
 }
