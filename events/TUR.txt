@@ -1,0 +1,14 @@
+add_namespace = TUR_event
+
+country_event = {
+	id = TUR_event.1
+	title = TUR_event.1.t
+	desc = TUR_event.1.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = TUR_event.1.a
+		add_ideas = TUR_new_constitution
+	}
+}

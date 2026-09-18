@@ -17,6 +17,12 @@ set_party_name = {
 	name = SOV_fascism_party_russian
 }
 
+#GREAT POLISH REVOLT
+country_event = {
+	id = merf_r.1
+	days = 465 #FEEL FREE TO TWEAK AS DESIRED
+}
+
 #COUNTRY LEADERS
 recruit_character = SOV_iosif_stalin
 recruit_character = SOV_supreme_soviet #This is a fake character! Proper country leader role is added via focus

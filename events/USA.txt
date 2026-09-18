@@ -395,6 +395,23 @@ country_event = {
 				}
 			    }
 			}
+			#dummy leaders
+			create_country_leader = {
+				name = "William Foster"
+				picture = "gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+				ideology = anti_revisionism
+				traits = {
+					###
+				}
+			}
+			create_country_leader = {
+				name = "George Lincoln Rockwell"
+				picture = "gfx/leaders/USA/Portrait_USA_Generic_land_3.dds"
+				ideology = gen_nazism
+				traits = {
+					###
+				}
+			}
 			load_oob = "USA_cw_dem"	
 			country_event = { id = merf_usa.6 days = 1095 }
 		}
@@ -408,6 +425,31 @@ country_event = {
                 		type = annex_everything
             		}
 			load_oob = "USA_cw_com"
+			#dummies
+			create_country_leader = {
+				name = "Smedley Butler"
+				picture = "gfx/leaders/USA/Portrait_USA_Generic_land_9.dds"
+				ideology = oligarchism
+				traits = {
+					###
+				}
+			}
+			create_country_leader = {
+				name = "Henry Wallace"
+				picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
+				ideology = socialism
+				traits = {
+					###
+				}
+			}
+			create_country_leader = {
+				name = "Eugene Talmadge"
+				picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+				ideology = fascism_ideology
+				traits = {
+					###
+				}
+			}
 		}
 		load_oob = "USA_cw_fash"
 		declare_war_on = {
@@ -416,6 +458,22 @@ country_event = {
             	}
 		news_event = merf_usa.7
 		set_party_name = { ideology = democratic long_name = USA_democratic_party  name = USA_democratic_party }
+		create_country_leader = {
+			name = "Norman Thomas"
+			picture = "gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+			ideology = marxism
+			traits = {
+				###
+			}
+		}
+		create_country_leader = {
+			name = "Joseph P. Kennedy Sr."
+			picture = "gfx/leaders/USA/Portrait_USA_Generic_2.dds"
+			ideology = centrism
+			traits = {
+				###
+			}
+		}
 	}
 }
 
@@ -452,6 +510,14 @@ country_event = {
 		}
 		set_cosmetic_tag = USA_democratic
 		news_event = merf_usa.8
+		create_country_leader = {
+			name = "Thomas Dewey"
+			picture = "gfx/leaders/USA/portrait_USA_thomas_dewey.dds"
+			ideology = conservatism
+			traits = {
+				###
+			}
+		}
 	}
 }
 
