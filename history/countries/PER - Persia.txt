@@ -346,6 +346,7 @@ set_politics = {
 	elections_allowed = no
 }
 set_cosmetic_tag = PER_qajar
+retire_character = PER_reza_shah_pahlavi
 promote_character = {
 	character = PER_mohammad_hassan_mirza
 	ideology = despotism

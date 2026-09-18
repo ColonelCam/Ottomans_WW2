@@ -2077,7 +2077,6 @@ focus_tree = {
 					value = 200
 				}
 			}
-			add_country_leader_trait = likes_germany
 		}
 	}
 

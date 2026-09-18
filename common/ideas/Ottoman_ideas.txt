@@ -1,8 +1,3 @@
-### FRENCH EMPIRE — ECONOMIC LAW IDEAS
-### Save as e.g. common/ideas/FRA_economic_laws.txt (or append to an existing ideas file).
-### Granted by FRA_state_directed_industry / FRA_private_imperial_charters focuses.
-### removal_cost = -1 makes them effectively permanent once picked, matching the
-### mutually_exclusive focus choice — the player can't take one and later swap to the other.
 
 ideas = {
 	country = {
@@ -28,9 +23,10 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = 0.2
 				production_speed_industrial_complex_factor = 0.1
-				research_speed_factor = 0.10
+				research_speed_factor = 0.05
 			}
 		}
+
 			TUR_san_remo_oil_agreement = {
 			picture = GFX_idea_TUR_san_remo_oil_agreemnt
 			allowed = { tag = TUR }
@@ -48,6 +44,43 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.1
 				conscription = -0.005
+				consumer_goods_expected_value = 0.1
+			}
+		}
+			TUR_consession_to_minorities_2 = {
+			picture = GFX_idea_TUR_consession_to_minorities
+			allowed = { tag = TUR }
+			removal_cost = -1
+
+			modifier = {
+				conscription = -0.005
+				consumer_goods_expected_value = 0.1
+			}
+		}
+			TUR_consession_to_minorities_3 = {
+			picture = GFX_idea_TUR_consession_to_minorities
+			allowed = { tag = TUR }
+			removal_cost = -1
+
+			modifier = {
+				conscription = -0.005
+			}
+		}
+			TUR_democratic_drift = {
+			picture = GFX_idea_TUR_democratic_drift
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				democratic_drift = 0.05
+			}
+		}
+			TUR_new_constitution = {
+			picture = GFX_idea_TUR_new_constitution
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.1
 			}
 		}
 	}
