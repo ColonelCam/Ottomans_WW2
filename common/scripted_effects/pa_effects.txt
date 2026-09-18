@@ -83,8 +83,3 @@ pa_belgium_effect = {
  add_to_faction = LUX
  news_event = { id = paris_accord.3 }
 }
-pa_afghanistan_effect = {
- AFG = { pa_leave_old_bloc = yes }
- random_other_country = { limit = { pa_is_russia = yes } puppet = AFG }
- news_event = { id = paris_accord.4 }
-}
