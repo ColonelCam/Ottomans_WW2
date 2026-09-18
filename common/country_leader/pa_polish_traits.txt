@@ -1,0 +1,8 @@
+leader_traits = {
+ PA_pilsudski_legacy = {
+  army_core_attack_factor = 0.10
+  army_core_defence_factor = 0.10
+  weekly_manpower = 500
+  industrial_capacity_factory = 0.05
+ }
+}

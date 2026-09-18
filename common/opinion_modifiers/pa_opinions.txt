@@ -1,0 +1,3 @@
+opinion_modifiers = {
+ PA_cyprus_refused = { value = -15 days = 365 }
+}
