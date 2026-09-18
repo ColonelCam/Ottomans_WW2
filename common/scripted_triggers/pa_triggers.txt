@@ -1,0 +1,22 @@
+pa_is_russia = { tag = SOV }
+pa_is_republican_spain = {
+ OR = { original_tag = SPR original_tag = SPA }
+ NOT = { has_country_flag = SPR_nationalist_spain_flag }
+ OR = {
+  has_country_flag = SPR_republican_spain_flag
+  has_country_flag = scw_no_lar_republicans
+  has_government = democratic
+  has_government = communism
+ }
+}
+pa_is_nationalist_spain = {
+ OR = { original_tag = SPR original_tag = SPA }
+ OR = { has_government = fascism has_country_flag = SPR_nationalist_spain_flag has_country_flag = scw_no_lar_nationalists }
+}
+pa_spanish_intervention_available = {
+ any_other_country = {
+  pa_is_republican_spain = yes
+  has_civil_war = yes
+  any_enemy_country = { pa_is_nationalist_spain = yes }
+ }
+}
