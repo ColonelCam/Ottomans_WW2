@@ -1,0 +1,28 @@
+pa_eastern_support_grant = {
+ add_offsite_building = { type = arms_factory level = 2 }
+ if = {
+  limit = { NOT = { has_country_flag = PA_eastern_template_created } }
+  division_template = {
+   name = "PA - Allied Infantry"
+   regiments = {
+    infantry = { x = 0 y = 0 }
+    infantry = { x = 0 y = 1 }
+    infantry = { x = 0 y = 2 }
+    infantry = { x = 1 y = 0 }
+    infantry = { x = 1 y = 1 }
+    infantry = { x = 1 y = 2 }
+    infantry = { x = 2 y = 0 }
+    infantry = { x = 2 y = 1 }
+    infantry = { x = 2 y = 2 }
+   }
+  }
+  set_country_flag = PA_eastern_template_created
+ }
+ capital_scope = {
+  create_unit = {
+   division = "division_template = \"PA - Allied Infantry\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+   owner = PREV
+   count = 5
+  }
+ }
+}
