@@ -1,0 +1,10 @@
+add_namespace = pa_axis
+news_event = {
+ id = pa_axis.1
+ title = pa_axis.1.t
+ desc = pa_axis.1.d
+ picture = GFX_report_event_generic_sign_treaty1
+ major = yes
+ is_triggered_only = yes
+ option = { name = pa_axis.1.a }
+}

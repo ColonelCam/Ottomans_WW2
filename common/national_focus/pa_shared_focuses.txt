@@ -1,0 +1,110 @@
+shared_focus = {
+ id = PA_friendship
+ icon = GFX_goal_generic_alliance
+ relative_position_id = FRA_coordinate_rearmament
+ x = 4
+ y = 3
+ cost = 1
+ ai_will_do = { factor = 1000000 }
+ available = { any_other_country = { pa_is_russia = yes NOT = { has_war_with = FRA } } }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ available_if_capitulated = no
+ search_filters = { FOCUS_FILTER_POLITICAL }
+ completion_reward = { pa_friendship_effect = yes }
+}
+shared_focus = {
+ id = PA_czechoslovakia
+ icon = GFX_goal_generic_defence
+ relative_position_id = PA_friendship
+ x = -3
+ y = 2
+ prerequisite = { focus = PA_friendship }
+ cost = 1
+ ai_will_do = { factor = 1000000 }
+ available = { date > 1936.5.31
+country_exists = CZE
+CZE = { NOT = { has_war_with = FRA } }
+is_faction_leader = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ available_if_capitulated = no
+ search_filters = { FOCUS_FILTER_POLITICAL }
+ completion_reward = { pa_czechoslovakia_effect = yes }
+}
+shared_focus = {
+ id = PA_spain
+ icon = GFX_goal_generic_military_sphere
+ relative_position_id = PA_friendship
+ x = 0
+ y = 2
+ prerequisite = { focus = PA_friendship }
+ cost = 1
+ ai_will_do = { factor = 1000000 }
+ available = { pa_spanish_intervention_available = yes
+is_faction_leader = yes }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ available_if_capitulated = no
+ search_filters = { FOCUS_FILTER_POLITICAL }
+ completion_reward = { pa_spain_effect = yes }
+}
+shared_focus = {
+ id = PA_belgium
+ icon = GFX_goal_generic_territory_or_war
+ relative_position_id = PA_friendship
+ x = 3
+ y = 2
+ prerequisite = { focus = PA_friendship }
+ cost = 1
+ ai_will_do = { factor = 1000000 }
+ available = { date > 1937.1.31
+country_exists = BEL
+country_exists = HOL
+country_exists = LUX
+is_faction_leader = yes
+BEL = { owns_state = 6 owns_state = 977 owns_state = 34 owns_state = 980 } }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ available_if_capitulated = no
+ search_filters = { FOCUS_FILTER_POLITICAL }
+ completion_reward = { pa_belgium_effect = yes }
+}
+shared_focus = {
+ id = PA_afghanistan
+ icon = GFX_goal_generic_political_pressure
+ relative_position_id = PA_friendship
+ x = 0
+ y = 4
+ prerequisite = { focus = PA_czechoslovakia }
+ prerequisite = { focus = PA_spain }
+ prerequisite = { focus = PA_belgium }
+ cost = 1
+ ai_will_do = { factor = 1000000 }
+ available = { date > 1937.12.31
+country_exists = AFG
+any_other_country = { pa_is_russia = yes NOT = { has_war_with = AFG } } }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ available_if_capitulated = no
+ search_filters = { FOCUS_FILTER_POLITICAL }
+ completion_reward = { pa_afghanistan_effect = yes }
+}
+shared_focus = {
+ id = PA_cyprus
+ icon = GFX_goal_generic_navy_battleship
+ relative_position_id = PA_friendship
+ x = 6
+ y = 2
+ prerequisite = { focus = PA_friendship }
+ cost = 1
+ ai_will_do = { factor = 1000000 }
+ available = { date > 1937.5.31
+country_exists = TUR
+TUR = { owns_state = 183 controls_state = 183 NOT = { has_war_with = FRA } } }
+ cancel_if_invalid = yes
+ continue_if_invalid = no
+ available_if_capitulated = no
+ search_filters = { FOCUS_FILTER_POLITICAL }
+ completion_reward = { TUR = { country_event = { id = paris_accord.10 } } }
+}

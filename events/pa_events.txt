@@ -1,0 +1,60 @@
+add_namespace = paris_accord
+news_event = {
+ id = paris_accord.1
+ title = paris_accord.1.t
+ desc = paris_accord.1.d
+ picture = GFX_report_event_generic_sign_treaty1
+ major = yes
+ is_triggered_only = yes
+ option = { name = paris_accord.1.a }
+}
+news_event = {
+ id = paris_accord.2
+ title = paris_accord.2.t
+ desc = paris_accord.2.d
+ picture = GFX_report_event_spain_civil_war_soldiers
+ major = yes
+ is_triggered_only = yes
+ option = { name = paris_accord.2.a }
+}
+news_event = {
+ id = paris_accord.3
+ title = paris_accord.3.t
+ desc = paris_accord.3.d
+ picture = GFX_report_event_generic_sign_treaty1
+ major = yes
+ is_triggered_only = yes
+ option = { name = paris_accord.3.a }
+}
+news_event = {
+ id = paris_accord.4
+ title = paris_accord.4.t
+ desc = paris_accord.4.d
+ picture = GFX_report_event_generic_sign_treaty1
+ major = yes
+ is_triggered_only = yes
+ option = { name = paris_accord.4.a }
+}
+country_event = {
+ id = paris_accord.10
+ title = paris_accord.10.t
+ desc = paris_accord.10.d
+ picture = GFX_report_event_generic_sign_treaty2
+ is_triggered_only = yes
+ option = {
+  name = paris_accord.10.a
+  ai_chance = { factor = 10 }
+  add_war_support = 0.05
+  add_stability = 0.05
+  add_opinion_modifier = { target = FRA modifier = PA_cyprus_refused }
+  FRA = { add_opinion_modifier = { target = TUR modifier = PA_cyprus_refused } }
+ }
+ option = {
+  name = paris_accord.10.b
+  trigger = { owns_state = 183 controls_state = 183 country_exists = FRA NOT = { has_war_with = FRA } }
+  ai_chance = { factor = 90 }
+  FRA = { transfer_state = 183 }
+  add_offsite_building = { type = industrial_complex level = 3 }
+  add_offsite_building = { type = arms_factory level = 2 }
+ }
+}

@@ -1,0 +1,42 @@
+on_actions = {
+ on_daily = {
+  effect = {
+   if = {
+    limit = {
+     date > 1938.1.19
+     date < 1938.1.21
+     NOT = { has_global_flag = PA_poland_ukraine_joined_axis }
+     country_exists = GER
+     country_exists = POL
+     country_exists = UKR
+     GER = {
+      is_subject = no
+      OR = { is_faction_leader = yes is_in_faction = no }
+      NOT = { has_war_with = POL }
+      NOT = { has_war_with = UKR }
+     }
+     POL = { NOT = { has_war_with = UKR } }
+    }
+    GER = {
+     if = {
+      limit = { is_in_faction = no }
+      set_rule = { can_create_factions = yes }
+      create_faction = AXIS
+     }
+     if = {
+      limit = { NOT = { is_in_faction_with = POL } }
+      POL = { pa_leave_old_bloc = yes }
+      add_to_faction = POL
+     }
+     if = {
+      limit = { NOT = { is_in_faction_with = UKR } }
+      UKR = { pa_leave_old_bloc = yes }
+      add_to_faction = UKR
+     }
+     set_global_flag = PA_poland_ukraine_joined_axis
+     news_event = { id = pa_axis.1 }
+    }
+   }
+  }
+ }
+}
