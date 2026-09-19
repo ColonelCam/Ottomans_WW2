@@ -12,3 +12,21 @@ country_event = {
 		add_ideas = TUR_new_constitution
 	}
 }
+country_event = {
+	id = TUR_event.2
+	title = TUR_event.2.t
+	desc = TUR_event.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = TUR_event.2.a
+		add_ideas = TUR_large_debt_repayment
+		complete_national_focus = TUR_pay_of_debt_in_full_now
+	}
+	option = {
+		name = TUR_event.2.b
+		add_ideas = TUR_small_debt_repayment
+		complete_national_focus = TUR_make_a_deal
+	}
+}

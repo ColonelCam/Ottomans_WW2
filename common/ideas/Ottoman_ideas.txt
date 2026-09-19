@@ -74,7 +74,31 @@ ideas = {
 				democratic_drift = 0.05
 			}
 		}
-			TUR_new_constitution = {
+			TUR_large_debt_repayment = {
+			picture = 
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.6
+			}
+		}
+			TUR_small_debt_repayment = {
+			picture = 
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.2
+			}
+		}
+			TUR_oil_company_subsidies = {
+			picture = 
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.1
+			}
+		}
+			TUR_a_new_constitution = {
 			picture = GFX_idea_TUR_new_constitution
 			allowed = { always = yes }
 			removal_cost = -1
