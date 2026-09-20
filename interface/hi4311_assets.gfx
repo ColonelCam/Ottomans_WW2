@@ -7,6 +7,10 @@ SpriteTypes = {
 		name = "GFX_PER_NEWS_EVENT_PICTURE_002"
 		texturefile = "gfx/event_pictures/PER_news_event_002.dds"
 	}
+	SpriteType = {
+		name = "GFX_PER_NEWS_EVENT_PICTURE_003"
+		texturefile = "gfx/event_pictures/PER_news_event_003.dds"
+	}
 	
 	SpriteType = {
 		name = "GFX_PER_EVENT_PICTURE_001"

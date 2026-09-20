@@ -1,9 +1,38 @@
 on_actions = {
 	on_capitulation = {
         effect = {
+			IF = {
+                limit = { # Persian conquest of Afghanistan
+                    FROM = { original_tag = PER }
+                    ROOT = { original_tag = AFG }
+                }
+
+                FROM = {
+                    annex_country = {
+						target = ROOT
+						transfer_troops = yes
+					}
+                    news_event = { id = h_per_news.3 days = 1 }
+                }
+            }
+			
             IF = {
                 limit = { # Turko-Persian War number umpteenth Idk, TUR wins over PER
-                    FROM = { original_tag = TUR }
+                    FROM = {
+						OR = {
+							original_tag = TUR
+							is_ally_with = TUR
+							
+							original_tag = ENG
+							is_ally_with = ENG
+							
+							original_tag = SOV
+							is_ally_with = SOV
+							
+							original_tag = FRA
+							is_ally_with = FRA
+						}
+					}
                     ROOT = { original_tag = PER }
                 }
 

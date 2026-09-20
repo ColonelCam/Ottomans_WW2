@@ -94,14 +94,14 @@ IF = {
 	give_guarantee = BEL
 }
 
-IF = {
-	limit = {
-		has_dlc = "Graveyard of Empires"
-	}
-	give_guarantee = IRQ
-}
+#IF = {
+#	limit = {
+#		has_dlc = "Graveyard of Empires"
+#	}
+#	give_guarantee = IRQ
+#}
 
-IRQ = {
+TUR = {
 	give_military_access = ENG
 	IF = {
 		limit = {
@@ -340,7 +340,7 @@ set_politics = {
 set_popularities = {
 	democratic = 86
 	fascism = 5
-	communism = 7
+	communism = 9
 }
 
 

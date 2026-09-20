@@ -71,26 +71,6 @@ BEL = { owns_state = 6 owns_state = 977 owns_state = 34 owns_state = 980 } }
  completion_reward = { pa_belgium_effect = yes }
 }
 shared_focus = {
- id = PA_afghanistan
- icon = GFX_goal_generic_political_pressure
- relative_position_id = PA_friendship
- x = 0
- y = 4
- prerequisite = { focus = PA_czechoslovakia }
- prerequisite = { focus = PA_spain }
- prerequisite = { focus = PA_belgium }
- cost = 1
- ai_will_do = { factor = 1000000 }
- available = { date > 1937.12.31
-country_exists = AFG
-any_other_country = { pa_is_russia = yes NOT = { has_war_with = AFG } } }
- cancel_if_invalid = yes
- continue_if_invalid = no
- available_if_capitulated = no
- search_filters = { FOCUS_FILTER_POLITICAL }
- completion_reward = { pa_afghanistan_effect = yes }
-}
-shared_focus = {
  id = PA_cyprus
  icon = GFX_goal_generic_navy_battleship
  relative_position_id = PA_friendship

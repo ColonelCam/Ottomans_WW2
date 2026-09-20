@@ -443,7 +443,7 @@ set_autonomy = {
 #Garner assassination
 country_event = {
 	id = merf_usa.1
-	days = 120
+	days = 125
 }
 
 #merf characters

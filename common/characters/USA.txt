@@ -183,8 +183,9 @@ characters={
 		}
 		country_leader={
 			ideology=marxism
-			expire="1965.1.1.1"
-			id=-1
+			traits = {
+				USA_twentieth_century_washington
+			}
 		}
 	}
 

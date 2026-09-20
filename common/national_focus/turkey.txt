@@ -19,7 +19,966 @@ focus_tree = {
 		x = 20
 		y = 0
 	}
+	
+	focus = {
+		id = TUR_despite_all_odds
+		icon = GFX_focus_TUR_misak_i_milli
+		x = 15
+		y = 2
+		cost = 5
 
+		ai_will_do = {
+			factor = 15
+		}
 
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = TUR_the_empire_survives
+		icon = GFX_focus_TUR_the_sun_language_theory
+		prerequisite = { focus = TUR_despite_all_odds }
+		x = 0
+		y = 1
+		relative_position_id = TUR_despite_all_odds
+		cost = 5
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = TUR_continue_liberal_agenda
+		icon = GFX_focus_generic_democratic_europe
+		prerequisite = { focus = TUR_the_empire_survives }
+		x = -5
+		y = 1
+		relative_position_id = TUR_the_empire_survives
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = TUR_democratic_drift
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = TUR_ensure_full_autonomy_for_vilayets
+		icon = GFX_focus_AFG_parliamentary_democracy
+		prerequisite = { focus = TUR_continue_liberal_agenda }
+		x = -1
+		y = 1
+		relative_position_id = TUR_continue_liberal_agenda
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			remove_ideas = TUR_consession_to_minorities
+			add_ideas = TUR_consession_to_minorities_2
+		}
+	}
+	focus = {
+		id = TUR_amend_the_constitution
+		icon = GFX_focus_TUR_ratify_the_six_arrows
+		prerequisite = { focus = TUR_continue_liberal_agenda }
+		x = 1
+		y = 1
+		relative_position_id = TUR_continue_liberal_agenda
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+				country_event = {
+					id = TUR_event.1
+					hours = 0
+				}			
+		}
+	}
+	focus = {
+		id = TUR_establish_regional_parliments
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		prerequisite = { focus = TUR_amend_the_constitution }
+		x = 0
+		y = 1
+		relative_position_id = TUR_amend_the_constitution
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			show_ideas_tooltip = TUR_zeki_velidi_togan
+		}
+	}
+	focus = {
+		id = TUR_establish_shared_banking
+		icon = GFX_focus_PER_national_bank
+		prerequisite = { focus = TUR_ensure_full_autonomy_for_vilayets }
+		x = 0
+		y = 1
+		relative_position_id = TUR_ensure_full_autonomy_for_vilayets
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			remove_ideas = TUR_consession_to_minorities_2
+			add_ideas = TUR_consession_to_minorities_3
+		}
+	}
+	focus = {
+		id = TUR_proclaim_the_federation
+		icon = GFX_focus_TUR_pivot_to_the_past
+		prerequisite = { focus = TUR_establish_shared_banking }
+		prerequisite = { focus = TUR_establish_regional_parliments }
+		x = 1
+		y = 1
+		relative_position_id = TUR_establish_shared_banking
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			remove_ideas = TUR_consession_to_minorities_3
+			set_cosmetic_tag = TUR_FED
+		}
+	}
+
+	focus = {
+		id = TUR_free_market_free_people
+		icon = GFX_focus_AST_liberty_loans
+		prerequisite = { focus = TUR_the_empire_survives }
+		x = 8
+		y = 1
+		relative_position_id = TUR_the_empire_survives
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_ideas = free_trade
+		}
+	}
+	focus = {
+		id = TUR_open_constantinople_stock_exchange
+		icon = GFX_focus_generic_stockpile_currency
+		prerequisite = { focus = TUR_free_market_free_people }
+		x = 0
+		y = 1
+		relative_position_id = TUR_free_market_free_people
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			797 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TUR_subsidise_oil_companies
+		icon = GFX_focus_PER_oil_baron
+		prerequisite = { focus = TUR_open_constantinople_stock_exchange }
+		x = -2
+		y = 1
+		relative_position_id = TUR_open_constantinople_stock_exchange
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_ideas = TUR_oil_company_subsidies
+			291 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
+	}
+	focus = {
+		id = TUR_allow_forgein_investment
+		icon = GFX_focus_generic_industry_investment
+		prerequisite = { focus = TUR_subsidise_oil_companies }
+		x = 1
+		y = 1
+		relative_position_id = TUR_subsidise_oil_companies
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+				add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
+		}
+	}
+	focus = {
+		id = TUR_libyan_oil_drilling
+		icon = GFX_focus_generic_develop_libya
+		prerequisite = { focus = TUR_subsidise_oil_companies }
+		x = -1
+		y = 1
+		relative_position_id = TUR_subsidise_oil_companies
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			448 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
+		}
+	}
+	focus = {
+		id = TUR_anatolian_road_program
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TUR_open_constantinople_stock_exchange }
+		x = 2
+		y = 1
+		relative_position_id = TUR_open_constantinople_stock_exchange
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			49 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}				
+			}
+			346 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}				
+			}
+			344 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}				
+			}
+			348 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}				
+			}
+			798 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}				
+			}
+		}
+	}
+	focus = {
+		id = TUR_mechanize_agriculture
+		icon = GFX_focus_generic_modernizing_agriculture
+		prerequisite = { focus = TUR_anatolian_road_program }
+		x = 1
+		y = 1
+		relative_position_id = TUR_anatolian_road_program
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			211 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}				
+			}
+			731 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}				
+			}
+		}
+	}
+	focus = {
+		id = TUR_protect_property_rights
+		icon = GFX_focus_ARG_strengthening_the_concordancia
+		prerequisite = { focus = TUR_anatolian_road_program }
+		x = -1
+		y = 1
+		relative_position_id = TUR_anatolian_road_program
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = TUR_laissez_faire_economics
+		icon = GFX_focus_generic_industry_investment
+		prerequisite = { focus = TUR_protect_property_rights }
+		prerequisite = { focus = TUR_mechanize_agriculture }
+		prerequisite = { focus = TUR_allow_forgein_investment }
+		prerequisite = { focus = TUR_libyan_oil_drilling }
+		x = -1
+		y = 1
+		relative_position_id = TUR_protect_property_rights
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_ideas = TUR_laissez_faire_economics
+		}
+	}
+	focus = {
+		id = TUR_revisit_oil_concessions
+		icon = GFX_focus_IRQ_anglo_iraqi_oil_expansion
+		prerequisite = { focus = TUR_the_empire_survives }
+		x = 0
+		y = 1
+		relative_position_id = TUR_the_empire_survives
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+				country_event = {
+					id = TUR_event.2
+					hours = 10
+				}			
+		}
+	}
+	focus = {
+		id = TUR_pay_of_debt_in_full_now
+		icon = GFX_focus_RAJ_institutional_money_laundering
+		prerequisite = { focus = TUR_revisit_oil_concessions }
+		x = 1
+		y = 1
+		relative_position_id = TUR_revisit_oil_concessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = TUR_large_debt_repayment
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = TUR_make_a_deal
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = TUR_revisit_oil_concessions }
+		mutually_exclusive = { focus = TUR_pay_of_debt_in_full_now }
+		x = -1
+		y = 1
+		relative_position_id = TUR_revisit_oil_concessions
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+		add_timed_idea = {
+			idea = TUR_small_debt_repayment
+			days = 1095
+		}
+		}
+	}
+	focus = {
+		id = TUR_return_of_oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = TUR_make_a_deal focus = TUR_pay_of_debt_in_full_now }
+		x = 1
+		y = 1
+		relative_position_id = TUR_make_a_deal
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			ENG = {
+				remove_resource_rights = 1010
+				remove_resource_rights = 676
+				remove_resource_rights = 291
+			}
+			remove_ideas = TUR_san_remo_oil_agreement
+		}
+	}
+	focus = {
+		id = TUR_defender_of_middleeastern_democracy
+		icon = GFX_focus_ARG_defense_and_democracy
+		prerequisite = { focus = TUR_laissez_faire_economics }
+		prerequisite = { focus = TUR_proclaim_the_federation }
+		x = 5
+		y = 2
+		relative_position_id = TUR_proclaim_the_federation
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = TUR_maintain_relations_with_allies
+		icon = GFX_focus_ARG_join_the_allies
+		prerequisite = { focus = TUR_defender_of_middleeastern_democracy }
+		x = 2
+		y = 1
+		relative_position_id = TUR_defender_of_middleeastern_democracy
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			TUR = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+				add_opinion_modifier = {
+					target = FRA
+					modifier = medium_increase
+				}
+				add_opinion_modifier = {
+					target = SOV
+					modifier = medium_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = TUR_invest_into_arabia
+		icon = GFX_focus_generic_befriend_saudi_arabia
+		prerequisite = { focus = TUR_defender_of_middleeastern_democracy }
+		x = -2
+		y = 1
+		relative_position_id = TUR_defender_of_middleeastern_democracy
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+		SAU = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 3
+            }
+		}
+	}
+}
+	focus = {
+		id = TUR_tackle_illiteracy
+		icon = GFX_focus_TUR_the_sun_language_theory
+		prerequisite = { focus = TUR_defender_of_middleeastern_democracy }
+		x = 0
+		y = 1
+		relative_position_id = TUR_defender_of_middleeastern_democracy
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			remove_ideas = TUR_widespread_illiteracy_idea
+		}
+	}
+	focus = {
+		id = TUR_fund_schools
+		icon = GFX_focus_INS_expand_batavia_med_school
+		prerequisite = { focus = TUR_tackle_illiteracy }
+		x = 0
+		y = 1
+		relative_position_id = TUR_tackle_illiteracy
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			show_ideas_tooltip = TUR_kamil_tolon			
+		}
+	}
+	focus = {
+		id = TUR_open_university_of_constantinople
+		icon = GFX_focus_PER_imperial_funded_universities
+		prerequisite = { focus = TUR_fund_schools }
+		x = 0
+		y = 1
+		relative_position_id = TUR_fund_schools
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = TUR_fortify_the_balkan_border
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TUR_invest_into_arabia }
+		x = -1
+		y = 1
+		relative_position_id = TUR_invest_into_arabia
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			346 = {
+				add_building_construction = {
+					province = 867
+					type = bunker
+					level = 1
+					instant_build = yes
+				}				
+			}
+			106 = {
+				add_building_construction = {
+					province = 3882
+					type = bunker
+					level = 1
+					instant_build = yes
+				}				
+			}	
+			803 = {
+				add_building_construction = {
+					province = 11832
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					province = 11857
+					type = bunker
+					level = 1
+					instant_build = yes
+				}	
+				add_building_construction = {
+					province = 11868
+					type = bunker
+					level = 1
+					instant_build = yes
+				}					
+			}			
+		}
+	}
+	focus = {
+		id = TUR_join_britain
+		icon = GFX_focus_eng_the_sun_never_sets
+		prerequisite = { focus = TUR_maintain_relations_with_allies }
+		x = 1
+		y = 1
+		relative_position_id = TUR_maintain_relations_with_allies
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			ENG = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+	focus = {
+		id = TUR_request_oman
+		icon = GFX_focus_TUR_taking_over_defense_of_the_gulf
+		prerequisite = { focus = TUR_join_britain }
+		x = 0
+		y = 1
+		relative_position_id = TUR_join_britain
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			country_event = {
+					id = TUR_event.3
+					hours = 0				
+			}
+		}
+	}
+	focus = {
+		id = TUR_claim_bosnia
+		icon = GFX_focus_YUG_safeguard_bosnia
+		prerequisite = { focus = TUR_fortify_the_balkan_border }
+		x = 1
+		y = 1
+		relative_position_id = TUR_fortify_the_balkan_border
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			104 = {
+				add_claim_by = TUR
+			}
+		}
+	}
+	focus = {
+		id = TUR_claim_dobruja
+		icon = GFX_focus_BUL_consolidate_the_third_bulgarian_state
+		prerequisite = { focus = TUR_fortify_the_balkan_border }
+		x = -1
+		y = 1
+		relative_position_id = TUR_fortify_the_balkan_border
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			971 = {
+				add_claim_by = TUR
+			}
+		}
+	}
+	focus = {
+	id = TUR_invade_romania
+	icon = GFX_focus_generic_attack_romania
+	prerequisite = { focus = TUR_claim_dobruja }
+	x = 0
+	y = 1
+	relative_position_id = TUR_claim_dobruja
+	cost = 10
+
+	ai_will_do = {
+		factor = 15
+	}
+
+	completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+				generator = 971
+			}
+		}
+	}
+	focus = {
+		id = TUR_invade_yugoslavia
+		icon = GFX_focus_generic_attack_yugoslavia
+		prerequisite = { focus = TUR_claim_bosnia }
+		x = 0
+		y = 1
+		relative_position_id = TUR_claim_bosnia
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = YUG
+				generator = 104
+			}
+		}
+	}
+	focus = {
+		id = TUR_the_ottoman_army
+		icon = GFX_focus_IRQ_royal_iraqi_army
+		x = 35
+		y = 2
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = TUR_inspect_the_airforce
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = TUR_the_ottoman_army }
+		x = -4
+		y = 1
+		relative_position_id = TUR_the_ottoman_army
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = TUR_aviation_command
+		icon = GFX_focus_PRC_pilot_training
+		prerequisite = { focus = TUR_inspect_the_airforce }
+		x = 0
+		y = 4
+		relative_position_id = TUR_inspect_the_airforce
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = TUR_continue_naval_buildup
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TUR_the_ottoman_army }
+		x = 4
+		y = 1
+		relative_position_id = TUR_the_ottoman_army
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = TUR_modernise_the_navy
+		icon = GFX_focus_JAP_expand_navy_technical_department
+		prerequisite = { focus = TUR_continue_naval_buildup }
+		x = 0
+		y = 4
+		relative_position_id = TUR_continue_naval_buildup
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = TUR_standadize_equipment
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = TUR_the_ottoman_army }
+		x = 1
+		y = 2
+		relative_position_id = TUR_the_ottoman_army
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 1
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = artillery
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	focus = {
+		id = TUR_army_schools
+		icon = GFX_focus_CZE_army_reform
+		prerequisite = { focus = TUR_the_ottoman_army }
+		x = -1
+		y = 2
+		relative_position_id = TUR_the_ottoman_army
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = GER_develop_modern_maneuver_warfare
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = TUR_orgainse_the_army
+		icon = GFX_focus_PRC_develop_the_army
+		prerequisite = { focus = TUR_army_schools focus = TUR_standadize_equipment}
+		x = 1
+		y = 1
+		relative_position_id = TUR_army_schools
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+			remove_ideas = TUR_disorganised_armed_forces
+			add_timed_idea = {
+				idea = TUR_disorganised_armed_forces
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = TUR_maximise_production
+		icon = GFX_focus_generic_mass_production
+		prerequisite = { focus = TUR_orgainse_the_army }
+		x = 1
+		y = 1
+		relative_position_id = TUR_orgainse_the_army
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = TUR_diversify_production
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TUR_orgainse_the_army }
+		x = -1
+		y = 1
+		relative_position_id = TUR_orgainse_the_army
+		mutually_exclusive = { focus = TUR_maximise_production }
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = TUR_ready_for_anything
+		icon = GFX_focus_URG_turmoil_of_paso_morlan
+		prerequisite = { focus = TUR_aviation_command }
+		prerequisite = { focus = TUR_modernise_the_navy }
+		prerequisite = { focus = TUR_diversify_production focus = TUR_maximise_production }
+		x = 1
+		y = 2
+		relative_position_id = TUR_diversify_production
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		completion_reward = {
+
+		}
+	}
 }
 

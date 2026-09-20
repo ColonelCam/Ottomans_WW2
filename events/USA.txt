@@ -450,6 +450,12 @@ country_event = {
 					###
 				}
 			}
+			set_popularities = {
+				democratic = 49
+				neutrality = 0
+				fascism = 6
+				communism = 45
+			}
 		}
 		load_oob = "USA_cw_fash"
 		declare_war_on = {
@@ -458,6 +464,7 @@ country_event = {
             	}
 		news_event = merf_usa.7
 		set_party_name = { ideology = democratic long_name = USA_democratic_party  name = USA_democratic_party }
+		set_party_name = { ideology = fascism long_name = USA_america_first_party_long name = USA_america_first_party }
 		create_country_leader = {
 			name = "Norman Thomas"
 			picture = "gfx/leaders/USA/Portrait_USA_Generic_1.dds"

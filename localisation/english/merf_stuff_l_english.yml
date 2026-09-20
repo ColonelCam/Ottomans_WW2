@@ -4,6 +4,7 @@
   USA_cactus_jack:0 "Cactus Jack"
   USA_share_the_wealth:0 "The Kingfish"
   USA_lion_of_idaho:0 "The Lion of Idaho"
+  USA_twentieth_century_washington:0 "20th Century Washington"
 
   #NEWS EVENTS
   merf_usa.3.t:0 "American President Assassinated!"
@@ -26,6 +27,13 @@
   merf_r.8.d:0 "Following the success of their uprising against Russia, Ukraine has not had an easy time of asserting control of their new lands.\n\nHaving been aided greatly by communist partisans, they have now turned against the new government.\n\nAmid public fear of a communist plot to stage a coup, the German-aligned military has beaten to them punch and taken full control of the government. They pledge to restore order and purge the red menace."
   merf_r.8.a:0 "[GER.GetLeader] will be loving this..."
 
+  merf.7.t:0 "Fascist Coup in Greece!"
+  merf.7.d:0 "Furious with the outcome of the Manchester Protocol and declaring the government to have betrayed all true patriots of Greece, ultranationalists in the military have stormed the Royal Palace and installed their own anti-Turkish government!\n\nThey've already mobilised troops and expelled the Turkish investors from Epirus, in direct violation of the Manchester Protocol.\n\nThe British have given them a deadline of 30 days to come to their senses and restore the international order."
+  merf.7.a:0 "They can't get away with that!"
+  merf.9.t:0 "German Intervention in Greece"
+  merf.9.d:0 "With the assistance of Yugoslavia, Germany officially announced today that they were fully recognising and supporting the new fascist government in Greece, and that any attack on them would be a direct violation of European sovereignty.\n\nThis comes just days before the British deadline to restore the Manchester Protocol expires.\n\nWith German and Serbian support, it now seems highly unlikely that either London or Constantinople will be able to do much, for now."
+  merf.9.a:0 "Those thieving bastards!"
+
   #COUNTRY EVENTS
  merf_r.2.t:0 "Ethnic Conflict in Russia"
  merf_r.2.d:0 "The Russian Empire is tearing at the seams, as Polish and Ukrainian nationalists increase their struggle, aided by the small regimes in Galicia and Western Ukraine.\n\nTheir problems can be our lessons, however, as we ourselves govern a multiethnic empire.\n\nWhat shall become of us?"
@@ -41,12 +49,31 @@
  merf_r.9.b:0 "The Russians are busy, just invade!"
  merf_r.9.c:0 "The current arrangement suits fine."
 
+ merf.1.t:0 "An Invitation to Manchester"
+ merf.1.d:0 "With the growing international tensions and amid strong foreign lobbying, the British have decided to host a summit in Manchester to attempt to resolve the question of our Greek population in Epirus.\n\nWe will be attending alongside a Greek delegation, with the goal of working together in the name of freedom to see off the totalitarian threats."
+ merf.1.a:0 "Let us go to Manchester"
+ merf.1.b:0 "Eh... it's a bit far..."
+ merf.2.t:0 "The Epirus Compromise"
+ merf.2.d:0 "The British have brokered a potential deal that the Greeks have found acceptable. In return for formally transferring sovereignty of Epirus to Greece, we will have unfettered economic access to Greece and its resources.\n\nWe will also join a military alliance, headed by the British, to seek mutual defence and support in any event of war."
+ merf.2.a:0 "This is acceptable to us, too."
+ merf.2.b:0 "We will never give up our land! Storm out the conference."
+ merf.3.t:0 "The Ottomans Accept the Epirus Compromise"
+ merf.4.t:0 "The Manchester Protocol"
+ merf.4.d:0 "As agreed, the attendees of the Manchester Summit will now commit to a military alliance.\n\nDue to the delicate nature of Epirus and the archaic way it is governed, the transferring of territory shall be deferred to a later date."
+ merf.4.a:0 "Long Live the Alliance!"
+ merf.4.b:0 "On second thoughts..."
+ merf.5.t:0 "Enforcement of the Protocol"
+ merf.5.d:0 "The British have decided that the Greeks have waited long enough, and now it is time to enforce the Manchester Protocol.\n\nIn return for formally transferring over the state of Epirus, we will receive complete resource rights. We will also have full access to Greek military bases."
+ merf.5.a:0 "The things we do for democracy..."
+ merf.5.b:0 "The Greeks be damned! Epirus is Turkish!"
+
 
   #IDEAS
   SOV_great_polish_revolt:0 "Great Polish Revolt"
 
   #TOOLTIPS
-  TUR_transcaucuses_condominium_tt:0 "§GA new, neutral country shall be formed out of the Russian Caucasian states.§! §YThis country will be guaranteed by both us and Russia, as well as giving us both military access. We will receive resource rights to the Azerbaijani Oil.§!\n\n§RThere will be further opportunities to fully bind this region to our will, in the future...§!"
+  TUR_transcaucuses_condominium_tt:0 "§GA new, neutral country shall be formed out of the Russian Caucasian states.§! §YThis country will be guaranteed by both us and Russia, as well as giving us both military access. We will receive resource rights to the Azerbaijani Oil.§!\n\n§RThere will be further opportunities to fully bind this region to our will, in the future...§!\n\n\n\nDev note from Merf- resource rights are buggy, they won't show up until after you unpause the game but rest assured I have tested this and it works."
+  TUR_manchester_summit_tt:0 "§GThe Manchester Summit will result in the creation of a faction with Britain.§!"
 
   #COSMETIC TAGS
   GEO_transcaucuses_condominium_ct:0 "Transcaucasian Commonwealth"
@@ -55,3 +82,13 @@
   POL_big_poland:0 "Greater Poland"
   POL_big_poland_DEF:0 "Greater Poland"
   POL_big_poland_ADJ:0 "Polish"
+
+
+  #PARTY NAMES
+ USA_america_first_party:0 "America First"
+ USA_america_first_party_long:0 "America First Party"
+
+ #FOCUSES
+ ENG_summit_in_manchester:0 "A Summit in Manchester"
+ ENG_enforce_protocols:0 "Enforce the Protocols"
+

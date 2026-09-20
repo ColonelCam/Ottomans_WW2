@@ -1,0 +1,16 @@
+﻿l_english:
+    TUR_event.1: "A New Constitution"
+    TUR_event.1.desc: "New Constitution"
+    TUR_event.1.t: "A New Constitution"
+    TUR_event.1.a: "Signed"
+    
+    TUR_event.2: "Approach Britain"
+    TUR_event.2.desc: "We can either pay a lot in a short time or a small amount over a long time."
+    TUR_event.2.t: "Repayment of Debt"
+    TUR_event.2.a: "Pay it in full asap"
+    TUR_event.2.b: "Pay it over a long time"
+    
+    TUR_event.3: "Britain Agrees"
+    TUR_event.3.desc: "The British accept control over Oman"
+    TUR_event.3.t: "The Ottomans assume full control of Oman"
+    TUR_event.3.a: "We will take care of them"

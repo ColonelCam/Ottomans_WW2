@@ -9,6 +9,37 @@ country_event = {
 
 	option = {
 		name = TUR_event.1.a
-		add_ideas = TUR_new_constitution
+		add_ideas = TUR_a_new_constitution
+	}
+}
+country_event = {
+	id = TUR_event.2
+	title = TUR_event.2.t
+	desc = TUR_event.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = TUR_event.2.a
+		complete_national_focus = TUR_pay_of_debt_in_full_now
+	}
+	option = {
+		name = TUR_event.2.b
+		complete_national_focus = TUR_make_a_deal
+	}
+}
+country_event = {
+	id = TUR_event.3
+	title = TUR_event.3.t
+	desc = TUR_event.3.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = TUR_event.3.a
+		annex_country = {
+			target = OMA
+			transfer_troops = yes
+		}
 	}
 }
