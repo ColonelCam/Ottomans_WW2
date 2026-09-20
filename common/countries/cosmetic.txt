@@ -805,6 +805,10 @@ transcaucasia_unified = {
     color = rgb { 204 102 0 }
     color_ui = rgb { 153 77 0 }
 }
+GEO_transcaucuses_condominium_ct = {
+    color = rgb { 204 102 0 }
+    color_ui = rgb { 153 77 0 }
+}
 
 siberia_unified = {
 	color = rgb { 51 204 51 }
