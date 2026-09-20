@@ -27,6 +27,13 @@
   merf_r.8.d:0 "Following the success of their uprising against Russia, Ukraine has not had an easy time of asserting control of their new lands.\n\nHaving been aided greatly by communist partisans, they have now turned against the new government.\n\nAmid public fear of a communist plot to stage a coup, the German-aligned military has beaten to them punch and taken full control of the government. They pledge to restore order and purge the red menace."
   merf_r.8.a:0 "[GER.GetLeader] will be loving this..."
 
+  merf.7.t:0 "Fascist Coup in Greece!"
+  merf.7.d:0 "Furious with the outcome of the Manchester Protocol and declaring the government to have betrayed all true patriots of Greece, ultranationalists in the military have stormed the Royal Palace and installed their own anti-Turkish government!\n\nThey've already mobilised troops and expelled the Turkish investors from Epirus, in direct violation of the Manchester Protocol.\n\nThe British have given them a deadline of 30 days to come to their senses and restore the international order."
+  merf.7.a:0 "They can't get away with that!"
+  merf.9.t:0 "German Intervention in Greece"
+  merf.9.d:0 "With the assistance of Yugoslavia, Germany officially announced today that they were fully recognising and supporting the new fascist government in Greece, and that any attack on them would be a direct violation of European sovereignty.\n\nThis comes just days before the British deadline to restore the Manchester Protocol expires.\n\nWith German and Serbian support, it now seems highly unlikely that either London or Constantinople will be able to do much, for now."
+  merf.9.a:0 "Those thieving bastards!"
+
   #COUNTRY EVENTS
  merf_r.2.t:0 "Ethnic Conflict in Russia"
  merf_r.2.d:0 "The Russian Empire is tearing at the seams, as Polish and Ukrainian nationalists increase their struggle, aided by the small regimes in Galicia and Western Ukraine.\n\nTheir problems can be our lessons, however, as we ourselves govern a multiethnic empire.\n\nWhat shall become of us?"

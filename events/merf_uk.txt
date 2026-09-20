@@ -102,6 +102,12 @@ country_event = {
 			transfer_state = 185
 			give_resource_rights = { receiver = TUR state = 47 }
 			give_resource_rights = { receiver = TUR state = 185 }
+			hidden_effect = {
+				country_event = {
+					id = merf.6
+					days = 135
+				}
+			}
 		}
 	}
 	#on second thoughts...
@@ -111,5 +117,96 @@ country_event = {
 		ENG = {
 			remove_from_faction = GRE
 		}
+		hidden_effect = {
+			GRE = {
+				country_event = {
+					id = merf.6
+					days = 60
+				}
+			}
+		}
+	}
+}
+
+#Greek Coup
+country_event = {
+	id = merf.6
+	title = merf.6.t
+	desc = merf.6.d
+	#picture =
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = merf.6.a
+		set_popularities = {
+			democratic = 15
+			neutrality = 30
+			fascism = 50
+			communism = 5
+		}
+		set_politics = {
+		    ruling_party = fascism
+		    elections_allowed = no
+		}
+		complete_national_focus = GRE_recruit_the_fascists
+		if = {
+			limit = {
+				is_in_faction_with = ENG
+			}
+			leave_faction = yes
+		}
+		news_event = merf.7
+		TUR = { 
+			remove_resource_rights = 47
+			remove_resource_rights = 185
+		}
+		country_event = {
+			id = merf.8
+			days = 25
+		}
+	}
+}
+
+#news event for above
+news_event = {
+	id = merf.7
+	title = merf.7.t
+	desc = merf.7.d
+	picture = GFX_news_event_greek_civil_war # GFX_news_event_the_megali_idea_succeeds
+	is_triggered_only = yes 
+	major = yes
+	option = {
+		name = merf.7.a
+	}
+}
+
+#Greco-Serbian joint application to the axis
+country_event = {
+	id = merf.8
+	title = merf.8.t
+	desc = merf.8.d
+	#picture =
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = merf.8.a
+		GER = {
+			add_to_faction = GRE
+			add_to_faction = YUG
+		}
+		news_event = merf.9
+	}
+}
+
+#news event for above
+news_event = {
+	id = merf.9
+	title = merf.9.t
+	desc = merf.9.d
+	picture = GFX_news_event_yugoslav_coup
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = merf.9.a
 	}
 }
