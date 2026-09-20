@@ -9,3 +9,8 @@
     TUR_event.2.t: "Repayment of Debt"
     TUR_event.2.a: "Pay it in full asap"
     TUR_event.2.b: "Pay it over a long time"
+    
+    TUR_event.3: "Britain Agrees"
+    TUR_event.3.desc: "The British accept control over Oman"
+    TUR_event.3.t: "The Ottomans assume full control of Oman"
+    TUR_event.3.a: "We will take care of them"

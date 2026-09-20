@@ -496,7 +496,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_war_support = 0.1
 		}
 	}
 	focus = {
@@ -513,7 +513,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			TUR = {
+				add_opinion_modifier = {
+					target = ENG
+					modifier = medium_increase
+				}
+				add_opinion_modifier = {
+					target = FRA
+					modifier = medium_increase
+				}
+				add_opinion_modifier = {
+					target = SOV
+					modifier = medium_increase
+				}
+			}
 		}
 	}
 	focus = {
@@ -530,9 +543,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		SAU = {
+            add_offsite_building = {
+                type = industrial_complex
+                level = 3
+            }
 		}
 	}
+}
 	focus = {
 		id = TUR_tackle_illiteracy
 		icon = GFX_focus_TUR_the_sun_language_theory
@@ -547,7 +565,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			remove_ideas = TUR_widespread_illiteracy_idea
 		}
 	}
 	focus = {
@@ -564,7 +582,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#turns illiteracy crisis into a timed idea to go away in like 5 years
+			show_ideas_tooltip = TUR_kamil_tolon			
 		}
 	}
 	focus = {
@@ -581,7 +599,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#research slot
+			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -598,7 +616,42 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			346 = {
+				add_building_construction = {
+					province = 867
+					type = bunker
+					level = 1
+					instant_build = yes
+				}				
+			}
+			106 = {
+				add_building_construction = {
+					province = 3882
+					type = bunker
+					level = 1
+					instant_build = yes
+				}				
+			}	
+			803 = {
+				add_building_construction = {
+					province = 11832
+					type = bunker
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					province = 11857
+					type = bunker
+					level = 1
+					instant_build = yes
+				}	
+				add_building_construction = {
+					province = 11868
+					type = bunker
+					level = 1
+					instant_build = yes
+				}					
+			}			
 		}
 	}
 	focus = {
@@ -615,7 +668,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			#join allies
+			ENG = {
+				add_to_faction = ROOT
+			}
 		}
 	}
 	focus = {
@@ -632,7 +687,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-		
+			country_event = {
+					id = TUR_event.3
+					hours = 0				
+			}
 		}
 	}
 	focus = {
@@ -649,7 +707,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			104 = {
+				add_claim_by = TUR
+			}
 		}
 	}
 	focus = {
@@ -666,7 +726,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			971 = {
+				add_claim_by = TUR
+			}
 		}
 	}
 	focus = {
@@ -683,7 +745,11 @@ focus_tree = {
 	}
 
 	completion_reward = {
-
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+				generator = 971
+			}
 		}
 	}
 	focus = {
@@ -700,7 +766,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			create_wargoal = {
+				type = take_state_focus
+				target = YUG
+				generator = 104
+			}
 		}
 	}
 	focus = {
@@ -715,7 +785,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			army_experience = 50
 		}
 	}
 	focus = {
@@ -800,7 +870,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 1
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = artillery
+				bonus = 1
+				uses = 1
+			}
 		}
 	}
 	focus = {
@@ -817,7 +896,13 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = GER_develop_modern_maneuver_warfare
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
@@ -834,7 +919,11 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			remove_ideas = TUR_disorganised_armed_forces
+			add_timed_idea = {
+				idea = TUR_disorganised_armed_forces
+				days = 365
+			}
 		}
 	}
 	focus = {

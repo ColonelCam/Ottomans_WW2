@@ -28,3 +28,18 @@ country_event = {
 		complete_national_focus = TUR_make_a_deal
 	}
 }
+country_event = {
+	id = TUR_event.3
+	title = TUR_event.3.t
+	desc = TUR_event.3.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = TUR_event.3.a
+		annex_country = {
+			target = OMA
+			transfer_troops = yes
+		}
+	}
+}
