@@ -101,19 +101,19 @@ IF = {
 #	give_guarantee = IRQ
 #}
 
-#IRQ = {
-#	give_military_access = ENG
-#	IF = {
-#		limit = {
-#			has_dlc = "No Compromise, No Surrender"
-#		}
-#		diplomatic_relation = { 
-#			country = ENG
-#			relation = OFFER_AIR_BASE_ACCESS 
-#			active = yes
-#		}
-#	}
-#}
+TUR = {
+	give_military_access = ENG
+	IF = {
+		limit = {
+			has_dlc = "No Compromise, No Surrender"
+		}
+		diplomatic_relation = { 
+			country = ENG
+			relation = OFFER_AIR_BASE_ACCESS 
+			active = yes
+		}
+	}
+}
 
 set_research_slots = 4
 
