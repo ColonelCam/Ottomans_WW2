@@ -2098,6 +2098,12 @@ country_event = {
 		name = germany.40.b
 		ai_chance = {
 			base = 100
+			if = {
+				limit = {
+					original_tag = ENG
+				}
+				country_event = { id = britain.9 days = 14 }
+			}
 			modifier = {
 				factor = 3
 				has_government = communism
