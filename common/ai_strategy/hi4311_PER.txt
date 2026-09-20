@@ -58,8 +58,13 @@ PER_prepare_for_war_strategy = {
 		value = 150
 	}
 	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 200
+	}
+	ai_strategy = {
 		type = force_build_armies
-		value = 750
+		value = 200
 	}
 }
 
@@ -76,7 +81,8 @@ PER_attack_AFG_strategy = {
 		type = force_concentration_front_factor
 
 		tag = AFG
-		strategic_region = 289 162
+		strategic_region = 289
+		strategic_region = 162
 		ratio = 0.8
 
 		value = 100

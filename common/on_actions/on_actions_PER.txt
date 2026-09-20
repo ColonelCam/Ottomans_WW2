@@ -1,25 +1,62 @@
 on_actions = {
 	on_capitulation = {
         effect = {
+			IF = {
+                limit = { # Persian conquest of Afghanistan
+                    FROM = { original_tag = PER }
+                    ROOT = { original_tag = AFG }
+                }
+
+                FROM = {
+                    annex_country = {
+						target = ROOT
+						transfer_troops = yes
+					}
+                    news_event = { id = h_per_news.3 days = 1 }
+                }
+            }
+			
             IF = {
                 limit = { # Turko-Persian War number umpteenth Idk, TUR wins over PER
-                    FROM = { original_tag = TUR }
+                    FROM = {
+						OR = {
+							original_tag = TUR
+							is_ally_with = TUR
+							
+							original_tag = ENG
+							is_ally_with = ENG
+							
+							original_tag = SOV
+							is_ally_with = SOV
+							
+							original_tag = FRA
+							is_ally_with = FRA
+						}
+					}
                     ROOT = { original_tag = PER }
                 }
 
                 TUR = {
                     annex_country = { target = PER }
-                    release_puppet_on_controlled = AFG
+                    release = AFG
                     AFG = {
                         every_core_state = { remove_core_of = PER }
+						start_civil_war = {
+							ideology = fascism
+							states = all
+						}
+						start_civil_war = {
+							ideology = communism
+							states = all
+						}
                     }
                     release_puppet_on_controlled = PER
                     PER = {
                         every_owned_state = {
                             limit = {
                                 OR = {
-                                    state = 413
                                     state = 421
+									state = 1000
                                     state = 1001
                                     state = 419
                                 }
@@ -27,7 +64,21 @@ on_actions = {
                             transfer_state_to = PREV.PREV
                             add_claim_by = PREV.PREV
                         }
+						drop_cosmetic_tag = yes
                     }
+					ENG = {
+						transfer_state = 412
+						transfer_state = 413
+					}
+					BLC = {
+						transfer_state = 410
+					}
+					SOV = {
+						transfer_state = 420
+						transfer_state = 266
+						transfer_state = 1004
+					}
+					country_event = { id = h_per_events.5 hours = 6 }
                 }
             }
         }

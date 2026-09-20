@@ -102,6 +102,20 @@ news_event = {
 	}
 }
 
+news_event = { # Persia Conquers Afghanistan
+	id = h_per_news.3
+	title = h_per_news.3.t
+	desc = h_per_news.3.d
+
+    major = yes
+	picture = GFX_PER_NEWS_EVENT_PICTURE_003
+	is_triggered_only = yes
+
+	option = {
+		name = h_per_news.3.yek	
+	}
+}
+
 country_event = { # Event for TUR, Persia claims our lands
     id = h_per_events.1
     title = h_per_events.1.t

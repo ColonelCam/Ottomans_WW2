@@ -1601,24 +1601,9 @@ PSH = {
 	color_ui = rgb { 31 138 31 }
 }
 
-PER_persian_empire = {
-	color = rgb { 0 165 114 }
-	color_ui = rgb { 0 165 114 }
-}
-
-PER_great_persian_empire = {
-	color = rgb { 0 165 114 }
-	color_ui = rgb { 0 165 114 }
-}
-
-PER_iranian_empire = {
-	color = rgb { 35 159 64 }
-	color_ui = rgb { 35 159 64 }
-}
-
-PER_great_iranian_empire = {
-	color = rgb { 35 159 64 }
-	color_ui = rgb { 35 159 64 }
+PER_qajar1 = {
+	color = rgb { 35 125 64 }
+	color_ui = rgb { 35 125 64 }
 }
 
 PER_persia = {
