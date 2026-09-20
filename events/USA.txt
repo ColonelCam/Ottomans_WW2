@@ -450,6 +450,12 @@ country_event = {
 					###
 				}
 			}
+			set_popularities = {
+				democratic = 49
+				neutrality = 0
+				fascism = 6
+				communism = 45
+			}
 		}
 		load_oob = "USA_cw_fash"
 		declare_war_on = {

@@ -35,4 +35,18 @@ leader_traits = {
 		}
 	}
 
+	USA_twentieth_century_washington = {
+		random = no
+		army_core_defence_factor = 0.10
+		conscription = 0.005
+		command_power_gain_mult = 0.5
+		ai_desired_divisions_factor = 0.10
+		communism_drift = 0.20
+		party_popularity_stability_factor = 0.20
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 }
