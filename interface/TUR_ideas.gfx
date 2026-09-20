@@ -28,7 +28,19 @@ spriteTypes = {
         texturefile = "gfx/interface/ideas/TUR_democratic_drift.dds"
     }
     spriteType = {
-        name = "GFX_idea_TUR_new_constitution"
-        texturefile = "gfx/interface/ideas/TUR_new_constitution.dds"
+        name = "GFX_idea_TUR_a_new_constitution"
+        texturefile = "gfx/interface/ideas/TUR_a_new_constitution.dds"
+    }
+    spriteType = {
+        name = "GFX_EST_exploit_the_banks"
+        texturefile = "gfx/interface/ideas/EST_exploit_the_banks.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_TUR_economics"
+        texturefile = "gfx/interface/ideas/TUR_economics.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_TUR_oil"
+        texturefile = "gfx/interface/ideas/TUR_oil.dds"
     }
 }

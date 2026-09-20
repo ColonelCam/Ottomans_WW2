@@ -252,7 +252,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+				add_offsite_building = {
+				type = industrial_complex
+				level = 3
+			}
 		}
 	}
 	focus = {
@@ -269,7 +272,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			448 = {
+				add_resource = {
+					type = oil
+					amount = 8
+				}
+			}
 		}
 	}
 	focus = {
@@ -337,7 +345,20 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			211 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}				
+			}
+			731 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}				
+			}
 		}
 	}
 	focus = {
@@ -354,7 +375,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -374,7 +395,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_ideas = TUR_laissez_faire_economics
 		}
 	}
 	focus = {
@@ -411,7 +432,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			add_timed_idea = {
+				idea = TUR_large_debt_repayment
+				days = 365
+			}
 		}
 	}
 	focus = {
@@ -429,7 +453,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+		add_timed_idea = {
+			idea = TUR_small_debt_repayment
+			days = 1095
+		}
 		}
 	}
 	focus = {
@@ -451,6 +478,7 @@ focus_tree = {
 				remove_resource_rights = 676
 				remove_resource_rights = 291
 			}
+			remove_ideas = TUR_san_remo_oil_agreement
 		}
 	}
 	focus = {

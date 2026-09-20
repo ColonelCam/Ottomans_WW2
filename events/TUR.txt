@@ -9,7 +9,7 @@ country_event = {
 
 	option = {
 		name = TUR_event.1.a
-		add_ideas = TUR_new_constitution
+		add_ideas = TUR_a_new_constitution
 	}
 }
 country_event = {
@@ -21,12 +21,10 @@ country_event = {
 
 	option = {
 		name = TUR_event.2.a
-		add_ideas = TUR_large_debt_repayment
 		complete_national_focus = TUR_pay_of_debt_in_full_now
 	}
 	option = {
 		name = TUR_event.2.b
-		add_ideas = TUR_small_debt_repayment
 		complete_national_focus = TUR_make_a_deal
 	}
 }
