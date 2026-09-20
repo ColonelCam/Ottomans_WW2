@@ -80,16 +80,39 @@ ideas = {
 	
 	hidden_ideas = {
 		PER_SCRIPTED_NARRATIVE_CONQUER_AFGHANISTAN = {
+			name = "Scripted AI Buff for Invading Afghanistan"
 			cancel = {
 				NOT = { has_war_with = AFG }
 			}
 			modifier = {
-				army_speed_factor = -0.5
+				army_speed_factor = -0.3
+				supply_factor = 0.8
+				no_supply_grace = 420
+				out_of_supply_factor = -0.3
+				attrition = -0.7
 			}
 			targeted_modifier = {
 				tag = AFG
-				attack_bonus_against = 0.7
-				defense_bonus_against = 0.7
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.5
+			}
+		}
+		
+		PER_SCRIPTED_BUFFS_OVERALL = {
+			name = "Scripted Persian AI buffs"
+			allowed = { always = yes }
+			cancel = { is_subject = yes }
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.12
+				production_factory_start_efficiency_factor = 0.12
+				attrition = -0.2
+				out_of_supply_factor = -0.2
+				terrain_penalty_reduction = 0.15
+				planning_speed = 0.1
+				army_morale_factor = 0.1
+				dig_in_speed_factor = 0.1
+				land_reinforce_rate = 0.1
+				experience_gain_army = 0.1
 			}
 		}
 	}
