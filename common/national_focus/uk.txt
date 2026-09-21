@@ -3050,7 +3050,7 @@ focus_tree = {
 				   template = faction_template_allies
 				   name = "Manchester Protocol"
 				   icon = GFX_faction_icon_allies
-				   color = { 255 89 244 }
+				   color = { 110 36 31 }
 				}
 			}
 			TUR = {
