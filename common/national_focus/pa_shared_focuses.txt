@@ -17,6 +17,7 @@ shared_focus = {
 	    desc = PA_friendship
 	    can_join_factions = no
 	}	
+	add_ideas = FRA_paris_accord_national_spirit
  }
 }
 shared_focus = {
