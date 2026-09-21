@@ -70,6 +70,7 @@
 
   #IDEAS
   SOV_great_polish_revolt:0 "Great Polish Revolt"
+  FRA_paris_accord_national_spirit:0 "Paris Accords"
 
   #TOOLTIPS
   TUR_transcaucuses_condominium_tt:0 "§GA new, neutral country shall be formed out of the Russian Caucasian states.§! §YThis country will be guaranteed by both us and Russia, as well as giving us both military access. We will receive resource rights to the Azerbaijani Oil.§!\n\n§RThere will be further opportunities to fully bind this region to our will, in the future...§!\n\n\n\nDev note from Merf- resource rights are buggy, they won't show up until after you unpause the game but rest assured I have tested this and it works."
