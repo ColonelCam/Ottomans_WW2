@@ -122,13 +122,12 @@ focus_tree = {
 	focus = { #ARMY
 		id = PER_restructure_army
 		icon = GFX_focus_PER_restructure_army
-		x = 10
-		y = 0
-		relative_position_id = PER_modernizing_iran
+		x = 8 y = 0
+		relative_position_id = PER_years_of_qajar
 		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 		
 		available = {
@@ -146,26 +145,24 @@ focus_tree = {
 			custom_effect_tooltip = CHL_skip_one_line_tt
 
 			random_core_state = {
-			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 0
-					include_locked = yes
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
 					}
+					is_owned_and_controlled_by = ROOT
+				}
 
-				is_owned_and_controlled_by = ROOT
-
-			}
-
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
-}
 	
 
 	focus = { #ARMY
@@ -175,7 +172,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = PER_restructure_army
-		cost = 4
+		cost = 3
 		
 		available = {
 			any_owned_state = {
@@ -202,7 +199,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -243,7 +240,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = PER_expand_military_facilities
-		cost = 4
+		cost = 3
 		
 		available = {
 			GER = {
@@ -264,7 +261,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -296,10 +293,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = PER_german_tanks
-		cost = 4
+		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -318,10 +315,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = PER_german_tanks
-		cost = 4
+		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -348,7 +345,7 @@ focus_tree = {
 		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -407,7 +404,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -460,7 +457,7 @@ focus_tree = {
 		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -487,10 +484,10 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = PER_restructure_army
-		cost = 5
+		cost = 4
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -525,8 +522,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = PER_foreign_retraining
-		mutually_exclusive = { focus = PER_swedish_artillery }
-		cost = 4
+		cost = 3
 
 		ai_will_do = {
 			factor = 20
@@ -564,7 +560,7 @@ focus_tree = {
 		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -600,10 +596,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = PER_establish_motor_arms
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -627,50 +623,6 @@ focus_tree = {
 	}
 
 	focus = { #ARMY
-		id = PER_increase_heavy_arms
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = PER_swedish_artillery }
-		x = 1
-		y = 1
-		relative_position_id = PER_swedish_artillery
-		cost = 3
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
-
-		completion_reward = {
-			
-			add_mastery= {
-				amount = 100
-				track = combat_support
-			}
-
-			custom_effect_tooltip = CHL_skip_one_line_tt
-			random_core_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					is_owned_and_controlled_by = ROOT
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = { #ARMY
 		id = PER_develop_qorkhaneh
 		icon = GFX_focus_PER_develop_qorkhaneh
 		prerequisite = { focus = PER_bolster_infantry }
@@ -680,7 +632,7 @@ focus_tree = {
 		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -710,10 +662,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = PER_develop_qorkhaneh
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -737,10 +689,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = PER_our_own_artillery
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -763,7 +715,7 @@ focus_tree = {
 		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -786,7 +738,7 @@ focus_tree = {
 		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -810,7 +762,7 @@ focus_tree = {
 		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 		
 		available = {
@@ -838,7 +790,7 @@ focus_tree = {
 		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -877,10 +829,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = PER_special_forces_program
-		cost = 3
+		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -923,11 +875,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = PER_special_forces_program
-		cost = 3
-		
-		available = {
-			has_completed_focus = PER_establish_special_unit
-		}
+		cost = 2
 
 		ai_will_do = {
 			factor = 2
@@ -968,7 +916,7 @@ focus_tree = {
 		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -997,13 +945,13 @@ focus_tree = {
 	focus = { #AIRFORCE
 		id = PER_establish_airforce
 		icon = GFX_focus_PER_establish_airforce
-		x = 30
+		x = 28
 		y = 0
-		relative_position_id = PER_modernizing_iran
-		cost = 4
+		relative_position_id = PER_years_of_qajar
+		cost = 3
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 		
 		available = {
@@ -1045,7 +993,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -1070,7 +1018,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -1151,7 +1099,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -1179,7 +1127,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1204,7 +1152,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -1232,7 +1180,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -1275,12 +1223,8 @@ focus_tree = {
 		relative_position_id = PER_construct_air_bases
 		cost = 2
 
-		available = {
-		
-		}
-
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -1308,7 +1252,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		search_filters = {
@@ -1343,7 +1287,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -1375,7 +1319,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -1406,7 +1350,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 
 		search_filters = {
@@ -1439,19 +1383,13 @@ focus_tree = {
 	focus = { #NAVY
 		id = PER_establish_the_navy
 		icon = GFX_focus_PER_establish_the_navy
-		x = 38
+		x = 35
 		y = 0
-		relative_position_id = PER_modernizing_iran
+		relative_position_id = PER_years_of_qajar
 		cost = 2
 
 		ai_will_do = {
-			factor = 10
-			modifier = {
-				any_controlled_state = {
-					is_coastal = no
-				}
-				factor = 0	
-			}
+			factor = 100
 		}
 
 		available = {
@@ -1564,7 +1502,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -1669,7 +1607,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		completion_reward = {
@@ -1691,7 +1629,7 @@ focus_tree = {
 		cost = 2
 
 		ai_will_do = {
-			factor = 15
+			factor = 100
 		}
 
 		search_filters = {
@@ -1905,14 +1843,13 @@ focus_tree = {
 	focus = {
 		id = PER_years_of_qajar
 		icon = GFX_focus_generic_islamic_propaganda
-		prerequisite = { focus = TAG_focus_title }
 		
 		x = 1 y = 0
-		cost = 5
+		cost = 4
 
 
 		ai_will_do = {
-			factor = 10
+			factor = 1000
 		}
 
 		completion_reward = {
@@ -1928,11 +1865,11 @@ focus_tree = {
 		prerequisite = { focus = PER_years_of_qajar }
 		
 		x = 0 y = 1
-		cost = 10
+		cost = 8
 
 
 		ai_will_do = {
-			factor = 10
+			factor = 1000
 		}
 
 		completion_reward = {
@@ -1954,9 +1891,8 @@ focus_tree = {
 		x = 0 y = 3
 		cost = 4
 
-
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 
 		completion_reward = {

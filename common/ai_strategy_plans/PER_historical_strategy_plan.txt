@@ -1,0 +1,91 @@
+PER_historical_plan = {
+	name = "Iran Historical Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = PER
+		has_dlc = "Graveyard of Empires"
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes 
+				has_game_rule = {
+					rule = PER_AI_BEHAVIOR
+					option = DEFAULT
+				}
+			}
+			has_country_flag = PER_AI_RANDOM_HISTORICAL
+			has_game_rule = {
+				rule = PER_AI_BEHAVIOR
+				option = HISTORICAL
+			}
+		}	
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+		# --- Qajar political root ---
+		PER_years_of_qajar
+		PER_constitutional_crisis
+
+		# --- Army / Rocketry branch ---
+		PER_restructure_army
+		PER_special_units
+		PER_import_rocketry
+
+		# --- Army excellence branch (tank path) ---
+		PER_expand_military_facilities
+		PER_german_tanks
+		PER_future_of_war
+		PER_train_tank_commanders
+		PER_military_excellency
+
+		# --- Air branch ---
+		PER_establish_airforce
+		PER_pilot_training
+		PER_luftwaffe_planes
+		PER_establish_air_academy
+		PER_battlefield_support
+		PER_perfect_iranian_airforce
+
+		# --- Navy branch (Caspian / merchant path) ---
+		PER_establish_the_navy
+		PER_construct_naval_bases
+		PER_bolster_the_caspian
+		PER_purchase_foreign_ships
+		PER_found_iranian_shipyards
+		PER_expand_dockyards
+		PER_merchant_navy
+
+		# --- Qajar Empire claims and expansion ---
+		PER_qajar_empire_claims
+		PER_qajar_empire_claims_on_ottomans
+		PER_qajar_empire_claims_on_afghanistan
+		PER_qajar_empire_support_from_germany
+		PER_qajar_empire_invade_zabulistan
+		PER_qajar_empire_core_zabulistan
+		PER_qajar_empire_join_axis
+	}
+
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
