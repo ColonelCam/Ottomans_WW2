@@ -43,4 +43,8 @@ spriteTypes = {
         name = "GFX_idea_TUR_oil"
         texturefile = "gfx/interface/ideas/TUR_oil.dds"
     }
+    spriteType = {
+        name = "GFX_idea_TUR_generic_production_bonus"
+        texturefile = "gfx/interface/ideas/TUR_generic_production_bonus.dds"
+    }
 }

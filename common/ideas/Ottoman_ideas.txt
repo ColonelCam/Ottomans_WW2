@@ -120,5 +120,25 @@ ideas = {
 				political_power_factor = -0.05
 			}
 		}
+			TUR_diversify_production = {
+			picture = TUR_generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+			TUR_maximise_production = {
+			picture = TUR_generic_production_bonus
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
 	}
 }
