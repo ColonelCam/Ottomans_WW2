@@ -52,6 +52,7 @@ on_actions = {
                     }
                     release_puppet_on_controlled = PER
                     PER = {
+						leave_faction = yes
                         every_owned_state = {
                             limit = {
                                 OR = {

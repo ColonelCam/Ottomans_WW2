@@ -34,13 +34,26 @@ PER_historical_plan = {
 		# --- Army / Rocketry branch ---
 		PER_restructure_army
 		PER_special_units
+		PER_special_forces_program
+		PER_recruit_bakhtiari
+		PER_expand_unique_unit
 		PER_import_rocketry
 
 		# --- Army excellence branch (tank path) ---
 		PER_expand_military_facilities
 		PER_german_tanks
 		PER_future_of_war
+		PER_reverse_engineer_tanks
+		PER_establish_tehran_armor
+		PER_expand_tehran_armor
 		PER_train_tank_commanders
+		PER_foreign_training
+		PER_bolster_infantry
+		PER_establish_motor_arms
+		PER_motorize_infantry
+		PER_develop_qorkhaneh
+		PER_our_own_artillery
+		PER_desert_training
 		PER_military_excellency
 
 		# --- Air branch ---
@@ -54,7 +67,7 @@ PER_historical_plan = {
 		# --- Navy branch (Caspian / merchant path) ---
 		PER_establish_the_navy
 		PER_construct_naval_bases
-		PER_bolster_the_caspian
+		PER_persian_gulf_fleet
 		PER_purchase_foreign_ships
 		PER_found_iranian_shipyards
 		PER_expand_dockyards

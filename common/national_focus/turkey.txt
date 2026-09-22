@@ -211,7 +211,7 @@ focus_tree = {
 	}
 	focus = {
 		id = TUR_subsidise_oil_companies
-		icon = GFX_focus_PER_oil_baron
+		icon = GFX_focus_INS_work_with_oil_barons
 		prerequisite = { focus = TUR_open_constantinople_stock_exchange }
 		x = -2
 		y = 1

@@ -1904,6 +1904,11 @@ focus_tree = {
 					province = 12852
 				}
 			}
+			build_railway = {
+				level = 1
+				start_province = 7982
+				target_province = 12852
+			}
 			add_ideas = PER_SCRIPTED_BUFFS_OVERALL
 		}
 	}
