@@ -43,7 +43,7 @@ ideas = {
 		}
 
 		GER_blitzkrieg_bop = {
-			picture = GFX_idea_NOR_contested_leadership_ns
+			picture = generic_victors_of_ww1
 			modifier = {
 				industrial_capacity_factory = 0.3
 				industrial_capacity_dockyard = 0.45
