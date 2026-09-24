@@ -41,6 +41,22 @@ ideas = {
 				join_faction_tension = 10.0
 			}
 		}
+
+		GER_blitzkrieg_bop = {
+			picture = GFX_idea_NOR_contested_leadership_ns
+			modifier = {
+				industrial_capacity_factory = 0.3
+				industrial_capacity_dockyard = 0.45
+				production_speed_buildings_factor = 0.15
+				production_lack_of_resource_penalty_factor = -0.33
+				army_speed_factor = 0.15
+				army_attack_factor = 0.15
+				army_core_attack_factor = 0.33
+				army_attack_against_major_factor = 0.05
+				army_breakthrough_against_major_factor = 0.15
+				ai_desired_divisions_factor = 0.35				
+			}
+		}
 	}
 
 }
