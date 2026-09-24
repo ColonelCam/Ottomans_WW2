@@ -79,7 +79,7 @@ if = {
 
 			add_timed_idea = {
 				idea = GER_blitzkrieg_bop
-				years = 3
+				years = 4
 			}
 
 starting_train_buffer = 2
