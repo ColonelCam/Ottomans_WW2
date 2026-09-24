@@ -115,5 +115,20 @@ ideas = {
 				experience_gain_army = 0.1
 			}
 		}
+		
+		AFG_SCRIPTED_DEBUFFS = {
+			name = "Afghanistan Must Die"
+			allowed = { always = yes }
+			cancel = { exists = no }
+			modifier = {
+				attrition = 0.4
+				out_of_supply_factor = 0.3
+				army_morale_factor = -0.5
+				dig_in_speed_factor = -0.5
+				land_reinforce_rate = -0.5
+				army_defence_factor = -0.4
+				army_strength_factor = -0.3
+			}
+		}
 	}
 }

@@ -2011,6 +2011,8 @@ focus_tree = {
 			}
 			TUR = { country_event = { id = h_per_events.2 days = 7 random_days = 14 } }
 			add_ideas = PER_SCRIPTED_NARRATIVE_CONQUER_AFGHANISTAN
+			custom_effect_tooltip = generic_skip_one_line_tt
+			AFG = { add_ideas = AFG_SCRIPTED_DEBUFFS }
 		}
 	}
 
