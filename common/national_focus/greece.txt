@@ -27,13 +27,12 @@ focus_tree = {
 		x = 5
 		y = 1
 		cost = 10
-		available = {
+		avalaible = {
 			date > 1939.06.06
 		}
 		ai_will_do = {
 			base = 1
 		}	
-		will_lead_to_war_with = TUR
 		completion_reward = {
 			declare_war_on = {
 				target = TUR
