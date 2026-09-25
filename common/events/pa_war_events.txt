@@ -1,0 +1,23 @@
+add_namespace = pa_war
+country_event = {
+ id = pa_war.1
+ hidden = yes
+ is_triggered_only = yes
+ immediate = {
+  add_timed_idea = { idea = PA_logistical_problems days = 140 }
+  if = { limit = { country_exists = POL } POL = { PA_grant_war_reinforcements = { COUNT = 24 } } }
+  if = { limit = { country_exists = UKR } UKR = { PA_grant_war_reinforcements = { COUNT = 24 } } }
+ }
+}
+country_event = {
+ id = pa_war.2
+ title = pa_war.2.t
+ desc = pa_war.2.d
+ picture = GFX_report_event_czech_soldiers_01
+ is_triggered_only = yes
+ immediate = {
+  PA_grant_war_reinforcements = { COUNT = 48 }
+  add_ideas = PA_not_one_step_back
+ }
+ option = { name = pa_war.2.a }
+}
