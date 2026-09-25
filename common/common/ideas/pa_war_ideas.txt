@@ -1,0 +1,23 @@
+ideas = {
+ country = {
+  PA_logistical_problems = {
+   picture = generic_army_war_college
+   removal_cost = -1
+   modifier = {
+    army_attack_factor = -5.0
+    army_defence_factor = -5.0
+    army_org_factor = -5.0
+    army_speed_factor = -5.0
+    max_dig_in_factor = -5.0
+   }
+  }
+  PA_not_one_step_back = {
+   picture = generic_army_war_college
+   removal_cost = -1
+   modifier = {
+    army_defence_factor = 100.0
+    army_org_factor = 100.0
+   }
+  }
+ }
+}

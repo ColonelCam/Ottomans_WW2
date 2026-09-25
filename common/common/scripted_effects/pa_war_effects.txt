@@ -1,0 +1,51 @@
+PA_prepare_reinforcement_template = {
+ if = {
+  limit = { NOT = { has_country_flag = PA_reserve_template_created } }
+  division_template = {
+   name = "PA - Reserve Infantry"
+   regiments = { infantry = { x = 0 y = 0 }
+infantry = { x = 0 y = 1 }
+infantry = { x = 0 y = 2 }
+infantry = { x = 1 y = 0 }
+infantry = { x = 1 y = 1 }
+infantry = { x = 1 y = 2 }
+infantry = { x = 2 y = 0 }
+infantry = { x = 2 y = 1 }
+infantry = { x = 2 y = 2 } }
+  }
+  set_country_flag = PA_reserve_template_created
+ }
+}
+PA_grant_war_reinforcements = {
+ PA_prepare_reinforcement_template = yes
+ capital_scope = {
+  create_unit = {
+   division = "division_template = \"PA - Reserve Infantry\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+   owner = PREV
+   count = $COUNT$
+  }
+ }
+}
+PA_check_czech_war = {
+ if = {
+  limit = {
+   NOT = { has_global_flag = PA_czech_war_started }
+   CZE = { exists = yes has_war_with = GER }
+  }
+  set_global_flag = PA_czech_war_started
+  CZE = { country_event = { id = pa_war.1 } }
+ }
+}
+PA_check_russian_last_stand = {
+ every_country = {
+  limit = {
+   pa_is_russia = yes
+   has_war = yes
+   has_capitulated = no
+   surrender_progress > 0.74999
+   NOT = { has_country_flag = PA_last_stand_triggered }
+  }
+  set_country_flag = PA_last_stand_triggered
+  country_event = { id = pa_war.2 }
+ }
+}

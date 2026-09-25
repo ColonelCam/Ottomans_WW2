@@ -1,0 +1,90 @@
+pa_leave_old_bloc = {
+ if = { limit = { is_subject = yes } overlord = { end_puppet = PREV } }
+ if = {
+  limit = { is_in_faction = yes }
+  if = { limit = { is_faction_leader = yes } dismantle_faction = yes }
+  else = { faction_leader = { remove_from_faction = PREV } }
+ }
+}
+pa_friendship_effect = {
+ pa_leave_old_bloc = yes
+ set_rule = { can_create_factions = yes }
+ create_faction = PA_faction
+ random_other_country = {
+  limit = { pa_is_russia = yes }
+  pa_leave_old_bloc = yes
+  FRA = { add_to_faction = PREV }
+ }
+ news_event = { id = paris_accord.1 }
+}
+pa_czechoslovakia_effect = {
+ CZE = { pa_leave_old_bloc = yes }
+ add_to_faction = CZE
+}
+pa_spain_effect = {
+ random_other_country = {
+  limit = { pa_is_republican_spain = yes has_civil_war = yes any_enemy_country = { pa_is_nationalist_spain = yes } }
+  save_event_target_as = pa_republic
+  pa_leave_old_bloc = yes
+  FRA = { add_to_faction = PREV }
+  every_enemy_country = {
+   limit = { pa_is_nationalist_spain = yes }
+   save_event_target_as = pa_nationalists
+   FRA = {
+    if = {
+     limit = { NOT = { has_war_with = event_target:pa_nationalists } }
+     declare_war_on = { target = event_target:pa_nationalists type = annex_everything }
+    }
+    every_other_country = {
+     limit = { is_in_faction_with = FRA NOT = { has_war_with = event_target:pa_nationalists } }
+     declare_war_on = { target = event_target:pa_nationalists type = annex_everything }
+    }
+   }
+  }
+ }
+ news_event = { id = paris_accord.2 }
+}
+pa_belgium_effect = {
+ 6 = { add_core_of = HOL }
+ 977 = { add_core_of = HOL }
+ 34 = { add_core_of = FRA }
+ 980 = { add_core_of = FRA }
+ HOL = { transfer_state = 6 transfer_state = 977 }
+ FRA = { transfer_state = 34 transfer_state = 980 }
+ BEL = {
+  every_owned_state = {
+   limit = { is_on_continent = europe }
+   add_core_of = FRA
+   FRA = { transfer_state = PREV }
+  }
+ }
+ 295 = { add_core_of = COG }
+ 538 = { add_core_of = COG }
+ 718 = { add_core_of = COG }
+ 888 = { add_core_of = COG }
+ 889 = { add_core_of = COG }
+ 890 = { add_core_of = COG }
+ 768 = { add_core_of = COG }
+ 769 = { add_core_of = COG }
+ COG = {
+  transfer_state = 295
+  transfer_state = 538
+  transfer_state = 718
+  transfer_state = 888
+  transfer_state = 889
+  transfer_state = 890
+  transfer_state = 768
+  transfer_state = 769
+  pa_leave_old_bloc = yes
+ }
+ FRA = { puppet = COG add_to_faction = COG }
+ COG = { set_cosmetic_tag = PA_FRENCH_CONGO }
+ LUX = { pa_leave_old_bloc = yes }
+ add_to_faction = LUX
+ news_event = { id = paris_accord.3 }
+}
+pa_afghanistan_effect = {
+ AFG = { pa_leave_old_bloc = yes }
+ random_other_country = { limit = { pa_is_russia = yes } puppet = AFG }
+ news_event = { id = paris_accord.4 }
+}

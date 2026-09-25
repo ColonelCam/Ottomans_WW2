@@ -1,0 +1,11 @@
+on_actions = {
+ on_war_relation_added = {
+  effect = { PA_check_czech_war = yes }
+ }
+ on_daily = {
+  effect = {
+   PA_check_czech_war = yes
+   PA_check_russian_last_stand = yes
+  }
+ }
+}
